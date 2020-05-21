@@ -5,16 +5,12 @@ import AppTop from './App';
 import {Provider} from "react-redux";
 import {createStore} from "redux";
 import produce from "immer";
+import {initialStateReducer} from './baselineState';
 
 
-const initialState={
-  anArray:[],
-  count:0,
-  boolThing:true
-};
 
 
-export const reducer = produce((draft=initialState, action) => {
+export const reducer = produce((draft=initialStateReducer, action) => {
   switch (action.type) {
     case "CONSTNAME":
       draft.count+=1;
