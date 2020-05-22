@@ -9,6 +9,7 @@ function GridEntry(props){
   return(
     <div>hey its {props.count}
     <div> also wao {props.value}</div>
+    <div>wut</div>
     <button onClick={props.onClickConstName()}>button..!!</button>
     <button onClick={() => {props.onClickDeliverer()}}>button..!!</button>
     </div>  
@@ -61,4 +62,5 @@ function mapStateToProps(state) {
     boolThing: state.boolThing,
   };
 }
+
 export default connect(mapStateToProps)(AppTop);

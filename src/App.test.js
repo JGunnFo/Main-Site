@@ -6,7 +6,7 @@ import { Provider } from "react-redux";
 import { render } from '@testing-library/react';
 import AppTop from './App';
 import {initialStateTest} from './baselineState';
-
+import ReactTestUtils from 'react-dom/test-utils'; // ES6
 
 
 describe('<App />', () => {
@@ -41,4 +41,5 @@ it('renders correctly', () => {
   const tree = renderer.create(<App />).toJSON();
   expect(tree).toMatchSnapshot();
 });
+
 });
