@@ -17,6 +17,7 @@ function mainContentFrame(props){
   return(
     <div>hey its {props.section}
     <div>{section_Main()}</div>
+    <div>{section_Bio()}</div>
     </div>  
   );
 }
@@ -31,7 +32,7 @@ function section_Main(){
 
 function section_Bio(){
   return(
-    <div></div>
+    <div>no</div>
   );
 }
 
@@ -47,9 +48,9 @@ function navBar(){
   );
 }
 
-function switchForSection(passto){
+function switchForSection(passTo){
   return(
-    <div>{passto}</div>
+    <div>{passTo}</div>
   );
 }
 
@@ -64,22 +65,17 @@ function resume(){
 
 class TopComponent extends React.Component {
 
-  constNameFunc = () => {
-    this.props.dispatch(constName());
-  };
-
-  delivererFunc = (passed) => {
-    this.props.dispatch(deliverer(passed));
-  };
-  
-  renderEntry(i) {
+  renderTop() {
     return(
-      <GridEntry
-      value={i}
-      count={this.props.count}
-      onClickConstName={()=>this.constNameFunc}
-      onClickDeliverer={()=>this.delivererFunc(i)}
+      <mainContentFrame
+      section={this.props.section}
       />
+    )
+  }
+
+  renderBottom() {
+    return(
+      <div>{navBar()}</div>
     )
   }
 
@@ -87,9 +83,9 @@ class TopComponent extends React.Component {
     return (
     <div className="App">
       <div>
-      huh
-      <div>{this.renderEntry(1)}</div>
-      <div>{this.renderEntry(2)}</div>
+      hmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+      <div>{this.renderTop()}</div>
+      <div>{this.renderBottom()}</div>
     </div>
 
     </div>
