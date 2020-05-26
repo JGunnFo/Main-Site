@@ -14,9 +14,6 @@ exports[`<App /> renders correctly 1`] = `
            also wao 
           1
         </div>
-        <div>
-          wao
-        </div>
         <button
           onClick={[Function]}
         >
@@ -36,9 +33,6 @@ exports[`<App /> renders correctly 1`] = `
         <div>
            also wao 
           2
-        </div>
-        <div>
-          wao
         </div>
         <button
           onClick={[Function]}
