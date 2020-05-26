@@ -4,21 +4,65 @@ import { connect } from "react-redux";
 import { CONSTNAME, constName} from "./Actions";
 import { DELIVERER, deliverer} from "./Actions";
 
+/*
+functions needed:
+email function
+resume funciotn
 
-function GridEntry(props){
+onclicks to dispatch action for navbar
+*/
+
+
+function mainContentFrame(props){
   return(
-    <div>hey its {props.count}
-    <div> also wao {props.value}</div>
-    <button onClick={props.onClickConstName()}>button..!!</button>
-    <button onClick={() => {props.onClickDeliverer()}}>button..!!</button>
+    <div>hey its {props.section}
+    <div>{section_Main()}</div>
     </div>  
-);
+  );
+}
+
+function section_Main(){
+  return(
+    <div>
+      <div>hey its {props.transition}</div>
+    </div>
+  );
+}
+
+function section_Bio(){
+  return(
+    <div></div>
+  );
+}
+
+function navBar(){
+  return(
+    <div>
+    <div>{resume()}</div>
+    <div>{switchForSection("bio")}</div>
+    <div>{switchForSection("main")}</div>
+    <div>{switchForSection("portfolio")}</div>
+    <div>{switchForSection("github")}</div>
+    </div>
+  );
+}
+
+function switchForSection(passto){
+  return(
+    <div>{passto}</div>
+  );
 }
 
 
 
+function resume(){
+  return(
+    <div></div>
+  );
+}
 
-class AppTop extends React.Component {
+
+class TopComponent extends React.Component {
 
   constNameFunc = () => {
     this.props.dispatch(constName());
@@ -56,10 +100,9 @@ class AppTop extends React.Component {
 
 function mapStateToProps(state) {
   return {
-    anArray: state.anArray,
-    count: state.count,
-    boolThing: state.boolThing,
+    section: state.section,
+    transition: state.transition
   };
 }
 
-export default connect(mapStateToProps)(AppTop);
+export default connect(mapStateToProps)(TopComponent);

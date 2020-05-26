@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 import configureMockStore from 'redux-mock-store';
 import { Provider } from "react-redux";
 import { render } from '@testing-library/react';
-import AppTop from './App';
+import TopComponent from './App';
 import {initialStateTest} from './baselineState';
 import ReactTestUtils from 'react-dom/test-utils'; // ES6
 
@@ -22,7 +22,7 @@ describe('<App />', () => {
 
   App = () => (
     <Provider store={theStore}>
-        <AppTop />
+        <TopComponent />
     </Provider>
 )
   });
