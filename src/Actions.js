@@ -1,14 +1,8 @@
 
-export const CONSTNAME = "CONSTNAME";
+export const GOTO = "GOTO";
 export const DELIVERER = "DELIVERER"
 
-export function constName(inputted=0){
-    return {type: CONSTNAME,
-    payload: inputted};
-}
-
-
-export function deliverer(inputted=0){
-    return {type: DELIVERER,
+export function goTo(inputted="main"){
+    return {type: GOTO,
     payload: inputted};
 }

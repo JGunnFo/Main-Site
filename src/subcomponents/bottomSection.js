@@ -1,12 +1,11 @@
 import React from 'react';
 import '../App.css';
 import { connect } from "react-redux";
-import { CONSTNAME, constName} from "../Actions";
-import { DELIVERER, deliverer} from "../Actions";
+import { GOTO, goTo} from "../Actions";
 
 export function navBar(props){
     return(
-      <div>
+      <div>3.  This is the navbar top, ie the lower frame
       <div>{resume()}</div>
       <div>{switchForSection("bio", props)}</div>
       <div>{switchForSection("main", props)}</div>
@@ -17,10 +16,15 @@ export function navBar(props){
   }
   
   function switchForSection(passTo, props){
+ 
+ /*
+ save the passTo and use it to pass to actions and 
+ to determine which icon to display, text, etc
+ */
     return(
       <div>
-      <div>{passTo}</div>
-      <div>heyyy its {props.section}</div>
+      <div>this is this section: {passTo} and demonstrating which section is active: {props.section}</div>
+      <div><button onClick={() => {props.dispatch(goTo(passTo))}}>attempt button</button></div>
       </div>
     );
   }
@@ -29,7 +33,7 @@ export function navBar(props){
   
   function resume(){
     return(
-      <div>heres where resume would be</div>
+      <div>heres resume component</div>
     );
   }
   

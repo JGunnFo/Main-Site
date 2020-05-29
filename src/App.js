@@ -1,17 +1,15 @@
 import React from 'react';
 import './App.css';
 import { connect } from "react-redux";
-import { CONSTNAME, constName} from "./Actions";
-import { DELIVERER, deliverer} from "./Actions";
+import { GOTO, goTo} from "./Actions";
 import { mainContentFrame } from "./subcomponents/topSection";
-import {navBar} from "./subcomponents/bottomSection";
+import { navBar } from "./subcomponents/bottomSection";
+
 
 /*
 functions needed:
 email function
 resume funciotn
-
-onclicks to dispatch action for navbar
 */
 
 
@@ -30,11 +28,14 @@ class TopComponent extends React.Component {
     )
   }
 
+
+
+
   render() {
     return (
     <div className="App">
       <div>
-      hmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+      1.   This is Topmost Component
       <div>{this.renderTop()}</div>
       <div>{this.renderBottom()}</div>
     </div>
