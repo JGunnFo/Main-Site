@@ -18,7 +18,7 @@ export function navBar(props){
   function switchForSection(passTo, props){
  
  /*
- save the passTo and use it to pass to actions and 
+ use the passto for actions and 
  to determine which icon to display, text, etc
  */
     return(
