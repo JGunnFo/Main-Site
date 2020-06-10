@@ -2,7 +2,7 @@
 
 .Default-Styling {
   background-color: #282c34;
-  margin: 10;
+  margin: 1;
 
   font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -18,7 +18,7 @@
   display: grid;
   height: 95vh;
   width: 95vw;
-  grid-template-rows: 5% 70% 25%;
+  grid-template-rows: 75% 25%;
   align-content: start;
 }
 
