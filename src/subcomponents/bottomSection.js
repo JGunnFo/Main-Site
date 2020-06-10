@@ -5,13 +5,24 @@ import { GOTO, goTo} from "../Actions";
 
 export function navBar(props){
     return(
-      <div>3.  This is the navbar top, ie the lower frame
+      <div className="Nav-Background">3.  This is the navbar top, ie the lower frame
+      <div>&nbsp;</div>
+      <div>&nbsp;</div>
+      <div>&nbsp;</div>
+      <div>&nbsp;</div>
+      <div>&nbsp;</div>
+      <div>&nbsp;</div>
+      <div>&nbsp;</div>
+      <div>&nbsp;</div>
+      <div>&nbsp;</div>
+      <div>&nbsp;</div>
+      <div className="Nav-Grid-Parent Nav-Flex-Parent">
       <div>{resume()}</div>
-      <div>{switchForSection("bio", props)}</div>
-      <div>{switchForSection("main", props)}</div>
+      <div className="Nav-Unselected">{switchForSection("bio", props)}</div>
+      <div className="Nav-Selected">{switchForSection("main", props)}</div>
       <div>{switchForSection("portfolio", props)}</div>
       <div>{switchForSection("github", props)}</div>
-      </div>
+      </div></div>
     );
   }
   
