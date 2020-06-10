@@ -1,38 +1,164 @@
-.App {
-  text-align: center;
-}
+/* --- Universal styles --- */ 
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+.Default-Styling {
   background-color: #282c34;
-  min-height: 100vh;
+  margin: 10;
+
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: whitesmoke;
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-box-sizing: border-box;
+}
+
+
+.Overall-Grid-Parent{
+  display: grid;
+  height: 95vh;
+  width: 95vw;
+  grid-template-rows: 5% 70% 25%;
+  align-content: start;
+}
+
+.Overall-Grid-Child{
+  justify-self: end;
+}
+
+/* ----- Top Section, for Main ----- */ 
+
+.Main-Text-Emph{
+  font-style: bold;
+}
+
+
+.Main-Text-Deemph{
+  color: gray;
+
+}
+
+/* ...Nontext styles */ 
+
+
+.Main-Email-Button{
+  
+}
+
+
+.Main-Grid-Parent{
+  display: grid;
+  grid-template: 1 1 1 1 1;
+  align-content: start;
+  gap: 6px;
+}
+
+
+
+.Main-Flex-Parent{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: left;
+  align-items: flex-start;
+  flex-grow: 1;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+
+/* ----- Top Section, for Bio  ----- */ 
+.Bio-Text{
+  font-size: 14px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+/* ...Nontext styles */ 
+
+.Bio-Photo{
+  
 }
+
+
+.Bio-Grid-Parent{
+  
+}
+
+
+.Bio-Flex-Parent{
+  
+}
+
+/* ----- Navbar ----- */ 
+
+.Nav-Background{
+  background-color: white;
+}
+
+
+.Nav-Selected{
+  color: gold;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+
+.Nav-Unselected{
+  color: gray;
+  font-size: 14px;
+}
+
+
+/* ...Nontext styles */ 
+
+
+.Nav-Icon{
+  
+}
+
+
+
+
+.Nav-Light-Icon{
+  
+}
+
+
+
+
+.Nav-Grid-Parent{
+  
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  align-content: start;
+  flex-direction: row-reverse;
+  gap: 6px;
+  
+}
+
+
+.Nav-Flex-Parent{
+  
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+  flex-grow: 1;
+}
+
+/* -----  ----- */ 
+
+
+/* -----  ----- */ 
+
+
+/* -----  ----- */ 
+
+
+/* ...Nontext styles */ 
+
+
+/* ...Grid styles */ 
+
+
+/* ...Flexbox styles */ 
+
+/* -----  ----- */ 

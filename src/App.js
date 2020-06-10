@@ -33,14 +33,11 @@ class TopComponent extends React.Component {
 
   render() {
     return (
-    <div className="App">
-      <div>
-      1.   This is Topmost Component
+      <div className="Overall-Grid-Parent">
       <div>{this.renderTop()}</div>
       <div>{this.renderBottom()}</div>
     </div>
 
-    </div>
   );
 }
 }

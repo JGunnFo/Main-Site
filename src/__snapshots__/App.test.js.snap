@@ -2,109 +2,106 @@
 
 exports[`<App /> renders correctly 1`] = `
 <div
-  className="App"
+  className="Overall-Grid-Parent"
 >
   <div>
-    1.   This is Topmost Component
     <div>
       <div>
+        2.   this is the upper frame
         <div>
-          2.   this is the upper frame
+          prop for currently toggled section:
+          main
           <div>
-            prop for currently toggled section:
-            main
             <div>
               <div>
-                <div>
-                  this is the "mainpage" subsection. heres a prop: TRANSITION:
-                  false
-                </div>
+                this is the "mainpage" subsection. heres a prop: TRANSITION:
+                false
               </div>
             </div>
+          </div>
+          <div>
             <div>
-              <div>
-                this is the "bio" subsection.
-              </div>
+              this is the "bio" subsection.
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  <div>
     <div>
       <div>
+        3.  This is the navbar top, ie the lower frame
         <div>
-          3.  This is the navbar top, ie the lower frame
+          <div>
+            heres resume component
+          </div>
+        </div>
+        <div>
           <div>
             <div>
-              heres resume component
+              this is this section: 
+              bio
+               and demonstrating which section is active: 
+              main
+            </div>
+            <div>
+              <button
+                onClick={[Function]}
+              >
+                attempt button
+              </button>
             </div>
           </div>
+        </div>
+        <div>
           <div>
             <div>
-              <div>
-                this is this section: 
-                bio
-                 and demonstrating which section is active: 
-                main
-              </div>
-              <div>
-                <button
-                  onClick={[Function]}
-                >
-                  attempt button
-                </button>
-              </div>
+              this is this section: 
+              main
+               and demonstrating which section is active: 
+              main
+            </div>
+            <div>
+              <button
+                onClick={[Function]}
+              >
+                attempt button
+              </button>
             </div>
           </div>
+        </div>
+        <div>
           <div>
             <div>
-              <div>
-                this is this section: 
-                main
-                 and demonstrating which section is active: 
-                main
-              </div>
-              <div>
-                <button
-                  onClick={[Function]}
-                >
-                  attempt button
-                </button>
-              </div>
+              this is this section: 
+              portfolio
+               and demonstrating which section is active: 
+              main
+            </div>
+            <div>
+              <button
+                onClick={[Function]}
+              >
+                attempt button
+              </button>
             </div>
           </div>
+        </div>
+        <div>
           <div>
             <div>
-              <div>
-                this is this section: 
-                portfolio
-                 and demonstrating which section is active: 
-                main
-              </div>
-              <div>
-                <button
-                  onClick={[Function]}
-                >
-                  attempt button
-                </button>
-              </div>
+              this is this section: 
+              github
+               and demonstrating which section is active: 
+              main
             </div>
-          </div>
-          <div>
             <div>
-              <div>
-                this is this section: 
-                github
-                 and demonstrating which section is active: 
-                main
-              </div>
-              <div>
-                <button
-                  onClick={[Function]}
-                >
-                  attempt button
-                </button>
-              </div>
+              <button
+                onClick={[Function]}
+              >
+                attempt button
+              </button>
             </div>
           </div>
         </div>
