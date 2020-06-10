@@ -5,7 +5,7 @@ import { GOTO, goTo} from "../Actions";
 
 export function navBar(props){
     return(
-      <div className="Nav-Background">3.  This is the navbar top, ie the lower frame
+      <div className="Nav-Background">
       <div>&nbsp;</div>
       <div>&nbsp;</div>
       <div>&nbsp;</div>
@@ -34,7 +34,7 @@ export function navBar(props){
  */
     return(
       <div>
-      <div>this is this section: {passTo} and demonstrating which section is active: {props.section}</div>
+      <div>{passTo}({props.section})</div>
       <div><button onClick={() => {props.dispatch(goTo(passTo))}}>attempt button</button></div>
       </div>
     );
@@ -44,7 +44,7 @@ export function navBar(props){
   
   function resume(){
     return(
-      <div>heres resume component</div>
+      <div>RESUMAY</div>
     );
   }
   

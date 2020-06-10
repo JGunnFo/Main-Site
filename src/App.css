@@ -50,6 +50,7 @@
 .Main-Grid-Parent{
   display: grid;
   grid-template: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 100%;
   align-content: start;
   gap: 6px;
 }
@@ -60,6 +61,7 @@
   display: flex;
   justify-content: left;
   align-items: flex-start;
+  flex-basis: 100%;
 }
 
 .Main-Flex-Child{
@@ -95,6 +97,7 @@
 
 .Nav-Background{
   background-color: white;
+  color: black;
 }
 
 
@@ -106,7 +109,7 @@
 
 
 .Nav-Unselected{
-  color: gray;
+  color: black;
   font-size: 14px;
 }
 
