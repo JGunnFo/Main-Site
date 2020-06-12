@@ -12,14 +12,21 @@
   -moz-osx-font-smoothing: grayscale;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+
+  --default-height: 95vh;
+  --default-width: 95vw;
+  --top-proportion-of-height: .70;
+  --bottom-proportion-of-height: .30;
+
 }
+
 
 
 .Overall-Grid-Parent{
   display: grid;
-  height: 95vh;
-  width: 95vw;
-  grid-template-rows: 60% 40%;
+  height: var(--default-height);
+  width: var(--default-width);
+  grid-template-rows: calc(var(--default-height)*var(--top-proportion-of-height)) calc(var(--default-height)*var(--bottom-proportion-of-height));
   align-content: start;
 }
 
@@ -49,10 +56,12 @@
 
 .Main-Grid-Parent{
   display: grid;
-  grid-template: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-columns: 100%;
-  align-content: start;
-  gap: 6px;
+  justify-content: stretch;
+  justify-items: stretch;
+  height: calc(var(--default-height)*var(--top-proportion-of-height));
+  width: var(--default-width);
+  gap: 5px;
+  margin: 0px 0px 0px 0px;
 }
 
 
@@ -60,7 +69,7 @@
 .Main-Flex-Parent{
   display: flex;
   justify-content: left;
-  align-items: flex-start;
+  align-items: flex-end;
   flex-basis: 100%;
 }
 
@@ -134,9 +143,9 @@
 .Nav-Grid-Parent{
   
   display: grid;
-  grid-template-columns: 50px 50px 50px 50px;
-  align-content: start;
-  flex-direction: row-reverse;
+  grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+  height: calc(var(--default-height)*var(--bottom-proportion-of-height));
+  width: var(--default-width);
   gap: 6px;
   
 }
@@ -145,8 +154,8 @@
 .Nav-Flex-Parent{
   
   display: flex;
-  justify-content: right;
   align-items: flex-end;
+  gap: 40px;
   flex-grow: 1;
 }
 

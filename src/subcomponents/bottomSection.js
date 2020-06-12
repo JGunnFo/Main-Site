@@ -6,16 +6,6 @@ import { GOTO, goTo} from "../Actions";
 export function navBar(props){
     return(
       <div className="Nav-Background">
-      <div>&nbsp;</div>
-      <div>&nbsp;</div>
-      <div>&nbsp;</div>
-      <div>&nbsp;</div>
-      <div>&nbsp;</div>
-      <div>&nbsp;</div>
-      <div>&nbsp;</div>
-      <div>&nbsp;</div>
-      <div>&nbsp;</div>
-      <div>&nbsp;</div>
       <div className="Nav-Grid-Parent Nav-Flex-Parent">
       <div>{resume()}</div>
       <div className="Nav-Unselected">{switchForSection("bio", props)}</div>
