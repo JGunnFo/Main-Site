@@ -8,11 +8,12 @@ export function navBar(props){
       <div className="Nav-Background">
       <div className="Nav-Grid-Parent Nav-Flex-Parent">
       <div>{resume()}</div>
-      <div className="Nav-Unselected">{switchForSection("bio", props)}</div>
-      <div className="Nav-Selected">{switchForSection("main", props)}</div>
-      <div>{switchForSection("portfolio", props)}</div>
-      <div>{switchForSection("github", props)}</div>
-      </div></div>
+      <div className="Nav-Unselected">{switchForSection("Bio", props)}</div>
+      <div className="Nav-Selected">{switchForSection("Main", props)}</div>
+      <div className="Nav-Unselected">{switchForSection("Portfolio", props)}</div>
+      <div className="Nav-Unselected">{switchForSection("Github", props)}</div>
+      </div>
+      &nbsp;</div>
     );
   }
   
@@ -24,8 +25,8 @@ export function navBar(props){
  */
     return(
       <div>
-      <div>{passTo}({props.section})</div>
-      <div><button onClick={() => {props.dispatch(goTo(passTo))}}>attempt button</button></div>
+      <div><button onClick={() => {props.dispatch(goTo(passTo))}}>icon</button></div>
+      <div>{passTo}</div>
       </div>
     );
   }
@@ -34,7 +35,8 @@ export function navBar(props){
   
   function resume(){
     return(
-      <div>RESUMAY</div>
+      <div className="Nav-Unselected">Résumé
+      </div>
     );
   }
   

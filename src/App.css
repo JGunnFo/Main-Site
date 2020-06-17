@@ -5,7 +5,7 @@
   margin: 1;
 
   font-family: Verdana, Arial, Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 40px;
   color: whitesmoke;
   
   -webkit-font-smoothing: antialiased;
@@ -41,8 +41,23 @@
 }
 
 
+
 .Main-Text-Deemph{
-  color: gray;
+  color:#A3A3A3;
+
+}
+
+.Line1{
+  margin-left: 100px;
+}
+
+.Line2{
+  margin-left: 200px;
+
+}
+
+.Line3{
+  margin-left: 300px;
 
 }
 
@@ -68,8 +83,8 @@
 
 .Main-Flex-Parent{
   display: flex;
-  justify-content: left;
-  align-items: flex-end;
+  justify-content: space-evenly;
+  flex-direction: column;
   flex-basis: 100%;
 }
 
@@ -81,7 +96,7 @@
 
 /* ----- Top Section, for Bio  ----- */ 
 .Bio-Text{
-  font-size: 14px;
+  font-size: 16px;
 }
 
 
@@ -113,13 +128,13 @@
 .Nav-Selected{
   color: gold;
   text-decoration: underline;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 
 .Nav-Unselected{
   color: black;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 
@@ -154,6 +169,7 @@
 .Nav-Flex-Parent{
   
   display: flex;
+  justify-content: flex-end;
   align-items: flex-end;
   gap: 40px;
   flex-grow: 1;
