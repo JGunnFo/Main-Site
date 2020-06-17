@@ -1,7 +1,7 @@
 /* --- Universal styles --- */ 
 
 .Default-Styling {
-  background-color: #282c34;
+  background-color: #121212;
   margin: 1;
 
   font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -60,6 +60,15 @@
   margin-left: 300px;
 
 }
+
+.InlineL{
+  display: inline;
+  position: fixed;
+  margin-left: -14px;
+  margin-top: 3px;
+  padding-top: 10px;
+}
+
 
 /* ...Nontext styles */ 
 
@@ -121,7 +130,7 @@
 
 .Nav-Background{
   background-color: white;
-  color: black;
+  color: #6A6A6A;
 }
 
 
@@ -133,7 +142,6 @@
 
 
 .Nav-Unselected{
-  color: black;
   font-size: 16px;
 }
 
