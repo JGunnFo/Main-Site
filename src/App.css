@@ -15,7 +15,7 @@
 
   --default-height: 95vh;
   --default-width: 95vw;
-  --top-proportion-of-height: .70;
+  --top-proportion-of-height: .65;
   --bottom-proportion-of-height: .30;
 
 }
@@ -85,7 +85,8 @@
   height: calc(var(--default-height)*var(--top-proportion-of-height));
   width: var(--default-width);
   gap: 5px;
-  margin: 0px 0px 0px 0px;
+  outline: 3px solid rgba(255,255,255,.2);
+  outline-offset: -12px;
 }
 
 
@@ -131,18 +132,17 @@
 .Nav-Background{
   background-color: white;
   color: #6A6A6A;
+  font-size: 16px;
 }
 
 
 .Nav-Selected{
   color: gold;
   text-decoration: underline;
-  font-size: 16px;
 }
 
 
 .Nav-Unselected{
-  font-size: 16px;
 }
 
 
@@ -171,6 +171,7 @@
   width: var(--default-width);
   gap: 6px;
   
+  margin: 10px 0px 0px 0px;
 }
 
 
@@ -181,6 +182,12 @@
   align-items: flex-end;
   gap: 40px;
   flex-grow: 1;
+}
+
+
+
+.Spacer {
+  margin: 0px -10px 0px 0px;
 }
 
 /* -----  ----- */ 
