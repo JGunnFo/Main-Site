@@ -139,10 +139,12 @@
 .Nav-Selected{
   color: gold;
   text-decoration: underline;
+  margin-right: 35px;
 }
 
 
 .Nav-Unselected{
+  margin-right: 35px;
 }
 
 
@@ -169,7 +171,7 @@
   grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
   height: calc(var(--default-height)*var(--bottom-proportion-of-height));
   width: var(--default-width);
-  gap: 6px;
+  grid-gap: 6px;
   
   margin: 10px 0px 0px 0px;
 }
@@ -180,7 +182,6 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  gap: 40px;
   flex-grow: 1;
 }
 
