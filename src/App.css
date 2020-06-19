@@ -1,7 +1,7 @@
 /* --- Universal styles --- */ 
 
 .Default-Styling {
-  background-color: #121212;
+  background: -webkit-linear-gradient(white, white 0%, black 0%, #121212, black  calc(var(--default-height)*var(--top-proportion-of-height-2)), white  calc(var(--default-height)*var(--top-proportion-of-height-2)), white);
   margin: 1;
 
   font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -17,6 +17,8 @@
   --default-width: 95vw;
   --top-proportion-of-height: .65;
   --bottom-proportion-of-height: .30;
+
+  --top-proportion-of-height-2: .68;
 
 }
 
@@ -130,7 +132,6 @@
 /* ----- Navbar ----- */ 
 
 .Nav-Background{
-  background-color: white;
   color: #6A6A6A;
   font-size: 16px;
 }
