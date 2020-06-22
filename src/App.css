@@ -78,6 +78,7 @@ html {
 
 }
 
+
 .InlineL{
   display: inline;
   position: fixed;
@@ -87,7 +88,58 @@ html {
 }
 
 
+
+@media (max-width:890px){
+  .Line1{
+    margin-left: 75px;
+  }
+  .Line2{
+    margin-left: 150px;
+  }
+  .Line3{
+    margin-left: 225px;
+  }
+  .InlineL{
+    margin-left: -14px;
+    margin-top: -3px;
+    padding-top: 10px;
+  }
+}
+
+
+@media (max-width:760px){
+  .Line1{
+    margin-left: 30px;
+  }
+  .Line2{
+    margin-left: 60px;
+  }
+  .Line3{
+    margin-left: 90px;
+  }
+  .InlineL{
+    margin-left: -14px;
+    margin-top: -14px;
+  }
+}
 /* ...Nontext styles */ 
+
+
+@media (max-width:460px){
+  .Line1{
+    margin-left: 50px;
+  }
+  .Line2{
+    margin-left: 52px;
+  }
+  .Line3{
+    margin-left: 54px;
+  }
+  .InlineL{
+    margin-left: -14px;
+    margin-top: -18px;
+  }
+}
 
 
 .Main-Email-Button{
@@ -117,7 +169,13 @@ html {
 
 @media (max-width:760px){
   .Main-Grid-Parent{
-    font-size:1.5rem;
+    font-size:1.4rem;
+  }
+}
+
+@media (max-width:460px){
+  .Main-Grid-Parent{
+    font-size:1.1rem;
   }
 }
 
