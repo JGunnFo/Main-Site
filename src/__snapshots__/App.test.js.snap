@@ -7,21 +7,36 @@ exports[`<App /> renders correctly 1`] = `
   <div>
     <div>
       <div>
-        2.   this is the upper frame
         <div>
-          prop for currently toggled section:
-          main
-          <div>
-            <div>
-              <div>
-                this is the "mainpage" subsection. heres a prop: TRANSITION:
-                false
-              </div>
+          <div
+            className="Main-Grid-Parent Main-Flex-Parent"
+          >
+            <div
+              className="Main-Text-Emph Line1"
+            >
+              <img
+                className="InlineL"
+                src="transparent.png"
+              />
+              React Redux Front-End Developer.
             </div>
-          </div>
-          <div>
-            <div>
-              this is the "bio" subsection.
+            <div
+              className="Main-Text-Deemph Line2"
+            >
+              <img
+                className="InlineL"
+                src="transparent.png"
+              />
+              Jeffrey Gunn
+            </div>
+            <div
+              className="Main-Text-Emph Line3"
+            >
+              <img
+                className="InlineL"
+                src="transparent.png"
+              />
+               Let's work together. [||]
             </div>
           </div>
         </div>
@@ -30,81 +45,88 @@ exports[`<App /> renders correctly 1`] = `
   </div>
   <div>
     <div>
-      <div>
-        3.  This is the navbar top, ie the lower frame
-        <div>
+      <div
+        className="Nav-Background"
+      >
+        <div
+          className="Nav-Grid-Parent Nav-Flex-Parent"
+        >
           <div>
-            heres resume component
-          </div>
-        </div>
-        <div>
-          <div>
-            <div>
-              this is this section: 
-              bio
-               and demonstrating which section is active: 
-              main
-            </div>
-            <div>
-              <button
-                onClick={[Function]}
-              >
-                attempt button
-              </button>
+            <div
+              className="Nav-Unselected"
+            >
+              Résumé
             </div>
           </div>
-        </div>
-        <div>
-          <div>
+          <div
+            className="Nav-Unselected"
+          >
             <div>
-              this is this section: 
-              main
-               and demonstrating which section is active: 
-              main
-            </div>
-            <div>
-              <button
-                onClick={[Function]}
-              >
-                attempt button
-              </button>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div>
-            <div>
-              this is this section: 
-              portfolio
-               and demonstrating which section is active: 
-              main
-            </div>
-            <div>
-              <button
-                onClick={[Function]}
-              >
-                attempt button
-              </button>
+              <div>
+                <button
+                  onClick={[Function]}
+                >
+                  icon
+                </button>
+              </div>
+              <div>
+                Bio
+              </div>
             </div>
           </div>
-        </div>
-        <div>
-          <div>
+          <div
+            className="Nav-Selected"
+          >
             <div>
-              this is this section: 
-              github
-               and demonstrating which section is active: 
-              main
-            </div>
-            <div>
-              <button
-                onClick={[Function]}
-              >
-                attempt button
-              </button>
+              <div>
+                <button
+                  onClick={[Function]}
+                >
+                  icon
+                </button>
+              </div>
+              <div>
+                Main
+              </div>
             </div>
           </div>
+          <div
+            className="Nav-Unselected"
+          >
+            <div>
+              <div>
+                <button
+                  onClick={[Function]}
+                >
+                  icon
+                </button>
+              </div>
+              <div>
+                Portfolio
+              </div>
+            </div>
+          </div>
+          <div
+            className="Nav-Unselected"
+          >
+            <div>
+              <div>
+                <button
+                  onClick={[Function]}
+                >
+                  icon
+                </button>
+              </div>
+              <div>
+                Github
+              </div>
+            </div>
+          </div>
+          <div
+            className="Spacer"
+          />
         </div>
+         
       </div>
     </div>
   </div>

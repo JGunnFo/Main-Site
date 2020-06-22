@@ -1,11 +1,21 @@
 /* --- Universal styles --- */ 
 
+root {
+  font-size: 16px;
+}
+
+
+html {
+  height: 100%;
+}
+
+
 .Default-Styling {
   background: -webkit-linear-gradient(white, white 0%, black 0%, #121212, black  calc(var(--default-height)*var(--top-proportion-of-height-2)), white  calc(var(--default-height)*var(--top-proportion-of-height-2)), white);
   margin: 1;
 
   font-family: Verdana, Arial, Helvetica, sans-serif;
-  font-size: 40px;
+  font-size: 1rem;
   color: whitesmoke;
   
   -webkit-font-smoothing: antialiased;
@@ -21,6 +31,11 @@
   --top-proportion-of-height-2: .68;
 
 }
+
+
+
+
+
 
 
 
@@ -89,8 +104,22 @@
   gap: 5px;
   outline: 3px solid rgba(255,255,255,.2);
   outline-offset: -12px;
+  font-size:2.5rem;
 }
 
+
+@media (max-width:890px){
+  .Main-Grid-Parent{
+    font-size:2rem;
+  }
+}
+
+
+@media (max-width:760px){
+  .Main-Grid-Parent{
+    font-size:1.5rem;
+  }
+}
 
 
 .Main-Flex-Parent{
@@ -108,7 +137,6 @@
 
 /* ----- Top Section, for Bio  ----- */ 
 .Bio-Text{
-  font-size: 16px;
 }
 
 
@@ -133,7 +161,6 @@
 
 .Nav-Background{
   color: #6A6A6A;
-  font-size: 16px;
 }
 
 

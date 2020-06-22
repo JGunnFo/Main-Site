@@ -12,7 +12,7 @@ export function navBar(props){
       <div className="Nav-Selected">{switchForSection("Main", props)}</div>
       <div className="Nav-Unselected">{switchForSection("Portfolio", props)}</div>
       <div className="Nav-Unselected">{switchForSection("Github", props)}</div>
-      <div class="Spacer"></div>
+      <div className="Spacer"></div>
       </div>
       &nbsp;</div>
     );
