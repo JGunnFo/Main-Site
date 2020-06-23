@@ -10,7 +10,6 @@ export function navBar(props){
       <div>{resume()}</div>
       <div className="Nav-Unselected">{switchForSection("Bio", props)}</div>
       <div className="Nav-Selected">{switchForSection("Main", props)}</div>
-      <div className="Nav-Unselected">{switchForSection("Portfolio", props)}</div>
       <div className="Nav-Unselected">{switchForSection("Github", props)}</div>
       <div className="Spacer"></div>
       </div>

@@ -16,7 +16,7 @@ export function mainContentFrame(props){
   function section_Main(props){
     return(
       <div className="Main-Grid-Parent Main-Flex-Parent">
-        <div className="Main-Text-Emph Line1"><img className="InlineL" src={theL} />React Redux Front-End Developer.</div>
+        <div className="Main-Text-Emph Line1"><img className="InlineL" src={theL} />React Redux Front-End Developer</div>
         <div className="Main-Text-Deemph Line2"><img className="InlineL" src={theL} />Jeffrey Gunn</div>
         <div className="Main-Text-Emph Line3"><img className="InlineL" src={theL} /> Let's work together. [||]</div>
       </div>

@@ -82,64 +82,12 @@ html {
 .InlineL{
   display: inline;
   position: fixed;
-  margin-left: -14px;
-  margin-top: 3px;
-  padding-top: 10px;
+  margin-left: -9px;
+  padding-top: 17px;
 }
 
 
-
-@media (max-width:890px){
-  .Line1{
-    margin-left: 75px;
-  }
-  .Line2{
-    margin-left: 150px;
-  }
-  .Line3{
-    margin-left: 225px;
-  }
-  .InlineL{
-    margin-left: -14px;
-    margin-top: -3px;
-    padding-top: 10px;
-  }
-}
-
-
-@media (max-width:760px){
-  .Line1{
-    margin-left: 30px;
-  }
-  .Line2{
-    margin-left: 60px;
-  }
-  .Line3{
-    margin-left: 90px;
-  }
-  .InlineL{
-    margin-left: -14px;
-    margin-top: -14px;
-  }
-}
 /* ...Nontext styles */ 
-
-
-@media (max-width:460px){
-  .Line1{
-    margin-left: 50px;
-  }
-  .Line2{
-    margin-left: 52px;
-  }
-  .Line3{
-    margin-left: 54px;
-  }
-  .InlineL{
-    margin-left: -14px;
-    margin-top: -18px;
-  }
-}
 
 
 .Main-Email-Button{
@@ -160,24 +108,6 @@ html {
 }
 
 
-@media (max-width:890px){
-  .Main-Grid-Parent{
-    font-size:2rem;
-  }
-}
-
-
-@media (max-width:760px){
-  .Main-Grid-Parent{
-    font-size:1.4rem;
-  }
-}
-
-@media (max-width:460px){
-  .Main-Grid-Parent{
-    font-size:1.1rem;
-  }
-}
 
 
 .Main-Flex-Parent{
@@ -257,7 +187,7 @@ html {
   grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
   height: calc(var(--default-height)*var(--bottom-proportion-of-height));
   width: var(--default-width);
-  grid-gap: 6px;
+  grid-column-gap: 6px;
   
   margin: 10px 0px 0px 0px;
 }
@@ -277,7 +207,80 @@ html {
   margin: 0px -10px 0px 0px;
 }
 
-/* -----  ----- */ 
+/* Responsive Adjustments */ 
+
+
+@media (max-width:890px){
+  .Line1{
+    margin-left: 75px;
+  }
+  .Line2{
+    margin-left: 150px;
+  }
+  .Line3{
+    margin-left: 225px;
+  }
+  .InlineL{
+    max-width: 28px;
+    max-height: 28px;
+  }
+  .Main-Grid-Parent{
+    font-size:2rem;
+  }
+}
+
+
+@media (max-width:760px){
+  .Line1{
+    margin-left: 30px;
+  }
+  .Line2{
+    margin-left: 60px;
+  }
+  .Line3{
+    margin-left: 90px;
+  }
+  .InlineL{
+    margin-top: -5px;
+    margin-left: -7px;
+    max-width: 19px;
+    max-height: 19px;
+  }
+  .Main-Grid-Parent{
+    font-size:1.4rem;
+  }
+}
+
+
+@media (max-width:460px){
+  .Line1{
+    margin-left: 50px;
+  }
+  .Line2{
+    margin-left: 52px;
+  }
+  .Line3{
+    margin-left: 54px;
+  }
+  .InlineL{
+    max-width: 15px;
+    max-height: 15px;
+  }
+  .Main-Grid-Parent{
+    font-size:1.1rem;
+  }
+
+  
+.Nav-Grid-Parent{
+}
+
+
+.Nav-Flex-Parent{
+}
+
+
+}
+
 
 
 /* -----  ----- */ 
