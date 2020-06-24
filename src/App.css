@@ -65,16 +65,16 @@ html {
 }
 
 .Line1{
-  margin-left: 100px;
+  margin-left: 6.25rem;
 }
 
 .Line2{
-  margin-left: 200px;
+  margin-left: 12.5rem;
 
 }
 
 .Line3{
-  margin-left: 300px;
+  margin-left: 18.75rem;
 
 }
 
@@ -82,8 +82,8 @@ html {
 .InlineL{
   display: inline;
   position: fixed;
-  margin-left: -9px;
-  padding-top: 17px;
+  margin-left: -.5625rem;
+  padding-top: 1.0625rem;
 }
 
 
@@ -101,9 +101,9 @@ html {
   justify-items: stretch;
   height: calc(var(--default-height)*var(--top-proportion-of-height));
   width: var(--default-width);
-  gap: 5px;
-  outline: 3px solid rgba(255,255,255,.2);
-  outline-offset: -12px;
+  gap: .3125rem;
+  outline: .1875rem solid rgba(255,255,255,.2);
+  outline-offset: -.75rem;
   font-size:2.5rem;
 }
 
@@ -155,12 +155,12 @@ html {
 .Nav-Selected{
   color: gold;
   text-decoration: underline;
-  margin-right: 35px;
+  margin-right: 2.1875rem;
 }
 
 
 .Nav-Unselected{
-  margin-right: 35px;
+  margin-right: 2.1875rem;
 }
 
 
@@ -184,12 +184,12 @@ html {
 .Nav-Grid-Parent{
   
   display: grid;
-  grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(6.25rem, 1fr));
   height: calc(var(--default-height)*var(--bottom-proportion-of-height));
   width: var(--default-width);
-  grid-column-gap: 6px;
+  grid-column-gap: .375rem;
   
-  margin: 10px 0px 0px 0px;
+  margin: .625rem 0px 0px 0px;
 }
 
 
@@ -204,7 +204,7 @@ html {
 
 
 .Spacer {
-  margin: 0px -10px 0px 0px;
+  margin: 0px -.625rem 0px 0px;
 }
 
 /* Responsive Adjustments */ 
@@ -212,17 +212,17 @@ html {
 
 @media (max-width:890px){
   .Line1{
-    margin-left: 75px;
+    margin-left: 4.6875rem;
   }
   .Line2{
-    margin-left: 150px;
+    margin-left: 9.375rem;
   }
   .Line3{
-    margin-left: 225px;
+    margin-left: 14.0625rem;
   }
   .InlineL{
-    max-width: 28px;
-    max-height: 28px;
+    max-width: 1.75rem;
+    max-height: 1.75rem;
   }
   .Main-Grid-Parent{
     font-size:2rem;
@@ -232,19 +232,19 @@ html {
 
 @media (max-width:760px){
   .Line1{
-    margin-left: 30px;
+    margin-left: 2.475rem;
   }
   .Line2{
-    margin-left: 60px;
+    margin-left: 3.75rem;
   }
   .Line3{
-    margin-left: 90px;
+    margin-left: 4.9875rem;
   }
   .InlineL{
-    margin-top: -5px;
-    margin-left: -7px;
-    max-width: 19px;
-    max-height: 19px;
+    margin-top: -.3125rem;
+    margin-left: -.4375rem;
+    max-width: 1.1875rem;
+    max-height: 1.1875rem;
   }
   .Main-Grid-Parent{
     font-size:1.4rem;
@@ -252,19 +252,24 @@ html {
 }
 
 
+/* The intent below is for the margins to be the same- but they are slightly off because
+if the margins are the exact same, they look like they're not lined up to me. 
+I'm not sure why this is- an optical illusion? */ 
+
+
 @media (max-width:460px){
   .Line1{
-    margin-left: 50px;
+    margin-left: 3.125rem;
   }
   .Line2{
-    margin-left: 52px;
+    margin-left: 3.25rem;
   }
   .Line3{
-    margin-left: 54px;
+    margin-left: 3.375rem;
   }
   .InlineL{
-    max-width: 15px;
-    max-height: 15px;
+    max-width: 0.9375rem;
+    max-height: 0.9375rem;
   }
   .Main-Grid-Parent{
     font-size:1.1rem;
