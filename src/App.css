@@ -10,6 +10,26 @@ html {
 }
 
 
+
+
+.svg-icon {
+  display: flex;   
+  justify-content: center; 
+  width: 2rem;
+  height: 2rm;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #4691f6;
+}
+
+.svg-icon circle {
+  stroke: #4691f6;
+  stroke-width: 1;
+}
+
 .Default-Styling {
   background: -webkit-linear-gradient(white, white 0%, black 0%, #121212, black  calc(var(--default-height)*var(--top-proportion-of-height-2)), white  calc(var(--default-height)*var(--top-proportion-of-height-2)), white);
   margin: 1;

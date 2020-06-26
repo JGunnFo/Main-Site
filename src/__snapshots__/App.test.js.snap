@@ -18,7 +18,7 @@ exports[`<App /> renders correctly 1`] = `
                 className="InlineL"
                 src="transparent.png"
               />
-              React Redux Front-End Developer.
+              React Redux Front-End Developer
             </div>
             <div
               className="Main-Text-Deemph Line2"
@@ -87,22 +87,6 @@ exports[`<App /> renders correctly 1`] = `
               </div>
               <div>
                 Main
-              </div>
-            </div>
-          </div>
-          <div
-            className="Nav-Unselected"
-          >
-            <div>
-              <div>
-                <button
-                  onClick={[Function]}
-                >
-                  icon
-                </button>
-              </div>
-              <div>
-                Portfolio
               </div>
             </div>
           </div>
