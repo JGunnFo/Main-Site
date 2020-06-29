@@ -13,20 +13,31 @@ html {
 
 
 .svg-icon {
-  display: flex;   
+  display: flex; 
   justify-content: center; 
-  width: 2rem;
-  height: 2rm;
+  width: 2.1rem;
+  height: 2rem;
 }
+
+.svg-icon-marginNorm{
+  margin: 0% 0% 25% 0%;
+
+}
+
+.svg-icon-margin2{
+  margin: 0% 0% 5% 15%;
+  
+}
+
 
 .svg-icon path,
 .svg-icon polygon,
 .svg-icon rect {
-  fill: #4691f6;
+  fill: black;
 }
 
 .svg-icon circle {
-  stroke: #4691f6;
+  stroke: black;
   stroke-width: 1;
 }
 
@@ -208,6 +219,7 @@ html {
   height: calc(var(--default-height)*var(--bottom-proportion-of-height));
   width: var(--default-width);
   grid-column-gap: .375rem;
+
   
   margin: .625rem 0px 0px 0px;
 }
