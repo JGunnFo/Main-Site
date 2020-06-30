@@ -11,36 +11,6 @@ html {
 
 
 
-
-.svg-icon {
-  display: flex; 
-  justify-content: center; 
-  width: 2.1rem;
-  height: 2rem;
-}
-
-.svg-icon-marginNorm{
-  margin: 0% 0% 25% 0%;
-
-}
-
-.svg-icon-margin2{
-  margin: 0% 0% 5% 15%;
-  
-}
-
-
-.svg-icon path,
-.svg-icon polygon,
-.svg-icon rect {
-  fill: black;
-}
-
-.svg-icon circle {
-  stroke: black;
-  stroke-width: 1;
-}
-
 .Default-Styling {
   background: -webkit-linear-gradient(white, white 0%, black 0%, #121212, black  calc(var(--default-height)*var(--top-proportion-of-height-2)), white  calc(var(--default-height)*var(--top-proportion-of-height-2)), white);
   margin: 1;
@@ -237,6 +207,53 @@ html {
 
 .Spacer {
   margin: 0px -.625rem 0px 0px;
+}
+
+
+
+/* SVG */ 
+
+
+
+.svg-icon {
+  display: flex; 
+  justify-content: center; 
+  width: 2.1rem;
+  height: 2rem;
+  color: #6e6e6e;
+}
+
+.svg-icon-marginNorm{
+  margin: 0% 0% 25% 0%;
+
+}
+
+.svg-icon-marginResume{
+  margin: 0% 0% 5% 15%;
+  
+}
+
+.svg-icon-marginGithub{
+  margin: 0% 0% 15% 0%;
+  
+}
+
+.svg-iconEmailButton {
+  display: inline-block;
+  vertical-align: middle;
+  color: lightskyblue;
+}
+
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill:currentColor;
+}
+
+.svg-icon circle {
+  stroke: black;
+  stroke-width: 1;
 }
 
 /* Responsive Adjustments */ 
