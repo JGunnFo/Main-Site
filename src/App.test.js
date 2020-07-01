@@ -48,7 +48,7 @@ it('renders without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(<App />, div);
 });
-it('renders correctly', () => {
+it('renders correctly according to snapshot', () => {
   const tree = renderer.create(<App />).toJSON();
   expect(tree).toMatchSnapshot();
 });
