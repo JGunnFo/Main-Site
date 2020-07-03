@@ -1,14 +1,16 @@
 import React from 'react';
 import '../App.css';
 import { connect } from "react-redux";
-import { GOTO, goTo} from "../Actions";
+import { NAVCLICK, NavClick} from "../Actions";
+
+
 
 export function navBar(props){
     return(
       <div className="Nav-Background">
       <div className="Nav-Grid-Parent Nav-Flex-Parent" role="navigation">
       <div>{resume()}</div>
-      <div className="Nav-Unselected" >{switchForSection("Bio", props)}</div>
+      <div className="Nav-Unselected">{switchForSection("Bio", props)}</div>
       <div className="Nav-Selected">{switchForSection("Main", props)}</div>
       <div className="Nav-Unselected">{switchForSection("Github", props)}</div>
       <div className="Spacer"></div>
@@ -76,12 +78,10 @@ if (passTo==="Resume"){
     return(
       <div>
       {selectSVG(passTo)}
-      <div><button onClick={() => {props.dispatch(goTo(passTo))}}></button></div>
-      <div>{passTo}</div>
+      <div><button className="asText" onClick={() => {props.dispatch(NavClick(passTo))}}>{passTo}</button></div>
       </div>
     );
   }
-  
   
   
   function resume(){

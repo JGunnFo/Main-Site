@@ -13,7 +13,7 @@ import {initialStateReducer} from './baselineState';
 export const reducer = produce((draft=initialStateReducer, action) => {
   switch (action.type) {
 
-    case "GOTO":
+    case "NAVCLICK":
       draft.section=action.payload;
       return draft;      
 

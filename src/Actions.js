@@ -1,8 +1,7 @@
 
-export const GOTO = "GOTO";
-export const DELIVERER = "DELIVERER"
+export const NAVCLICK = "NAVCLICK";
 
-export function goTo(inputted="main"){
-    return {type: GOTO,
+export function NavClick(inputted="main"){
+    return {type: NAVCLICK,
     payload: inputted};
 }

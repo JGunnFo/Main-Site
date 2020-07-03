@@ -1,10 +1,10 @@
 
 export const initialStateReducer={
-    section: "main",
+    section: "Main",
     transition:false
   };
 
 export const initialStateTest={
-    section: "main",
+    section: "Main",
     transition:false
 };

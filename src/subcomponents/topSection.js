@@ -7,13 +7,11 @@ import theL from './transparent.png';
 
 export function mainContentFrame(props){
     return(
-      <div>
-      <div role="main" aria-live="polite">{section_Main(props)}</div>
-      </div>  
+      <div aria-live="polite">{select_Content(props.section)}</div>  
     );
   }
   
-  function section_Main(props){
+  function section_Main(){
     return(
       <div className="Main-Grid-Parent Main-Flex-Parent">
         <div className="Main-Text-Emph Line1"><img className="InlineL" src={theL} aria-hidden="true" />React Redux Front-End Developer</div>
@@ -23,12 +21,34 @@ export function mainContentFrame(props){
     );
   }
   
-  function section_Bio(props){
+  function section_Bio(){
     return(
       <div>this is the "bio" subsection.</div>
     );
   }
   
+
+
+  function select_Content(mainProp){
+
+    if (mainProp==="Main"){
+      return( 
+        <div role="main">{section_Main()}</div>
+     )
+  }
+  
+  
+  if (mainProp==="Bio"){
+    return( 
+      <div role="main">{section_Bio()}</div>
+   )
+  }
+  
+   
+  }
+  
+  
+
 
   function emailButton(){
     return( 
