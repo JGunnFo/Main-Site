@@ -19,7 +19,6 @@ export function navBar(props){
 
 
 function selectSVG(passTo){
-  let finalSVG
 
   if (passTo==="Bio"){
     return( 
