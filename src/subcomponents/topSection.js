@@ -7,11 +7,11 @@ import theL from './transparent.png';
 
 export function mainContentFrame(props){
     return(
-      <div aria-live="polite">{select_Content(props.section)}</div>  
+      <div aria-live="polite">{selectContent(props.section)}</div>  
     );
   }
   
-  function section_Main(){
+  function sectionMain(){
     return(
       <div className="Main-Grid-Parent Main-Flex-Parent">
         <div className="Main-Text-Emph Line1"><img className="InlineL" src={theL} aria-hidden="true" />React Redux Front-End Developer</div>
@@ -21,26 +21,32 @@ export function mainContentFrame(props){
     );
   }
   
-  function section_Bio(){
+  function sectionBio(){
     return(
-      <div>this is the "bio" subsection.</div>
+      <div className="Bio-Grid-Parent Bio-Flex-Parent">
+        <div className="Bio-Text">
+        <p>Hi, I'm a front-end developer who likes goats, modern European history, and colorful hairstyles.</p>
+        <p>I grew up in Texas, then moved to Portland and worked QA before deciding to become a front-end developer.</p>
+        <p>I love to learn by comparing lots of different things, whether that means comparing different websites' visual designs or countries' histories. I get a big kick out of understanding the possibilities and their nuanced tradeoffs.</p>
+        <p>Let's work together: {emailButton()}</p></div>
+      </div>
     );
   }
   
 
 
-  function select_Content(mainProp){
+  function selectContent(mainProp){
 
     if (mainProp==="Main"){
       return( 
-        <div role="main">{section_Main()}</div>
+        <div role="main">{sectionMain()}</div>
      )
   }
   
   
   if (mainProp==="Bio"){
     return( 
-      <div role="main">{section_Bio()}</div>
+      <div role="main">{sectionBio()}</div>
    )
   }
   

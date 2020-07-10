@@ -126,6 +126,14 @@ html {
 
 /* ----- Top Section, for Bio  ----- */ 
 .Bio-Text{
+  margin: 1.25rem 1.25rem 1.25rem 2.25rem;
+  
+  max-height: 30vh;
+  max-width: 60vw;
+}
+
+p{
+  line-height: 2rem;
 }
 
 
@@ -139,17 +147,28 @@ html {
 
 .Bio-Grid-Parent{
   
+  display: grid;
+  align-content: center;
+  height: calc(var(--default-height)*var(--top-proportion-of-height));
+  width: var(--default-width);
+  gap: .125rem;
+  outline: .1875rem solid rgba(255,255,255,.2);
+  outline-offset: -.75rem;
+  font-size:1.125rem;
 }
 
 
 .Bio-Flex-Parent{
-  
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
 }
+
+
+
+/* ----- Lower Half, mainly Navbar ----- */ 
 
 /* ----- Navbar ----- */ 
-
-.Nav-Background{;
-}
 
 
 .Nav-Selected{
@@ -173,6 +192,10 @@ html {
 
 
 /* ...Nontext styles */ 
+
+
+.Nav-Background{
+}
 
 
 .Nav-Icon{
@@ -282,6 +305,12 @@ html {
     max-width: 1.75rem;
     max-height: 1.75rem;
   }
+  
+
+  .Bio-Text{
+    max-width: 70vw;
+  }
+
   .Main-Grid-Parent{
     font-size:2rem;
   }
@@ -307,6 +336,15 @@ html {
   .Main-Grid-Parent{
     font-size:1.4rem;
   }
+  
+
+  p{
+    line-height: 1.75rem;
+  }
+  
+.Bio-Grid-Parent{
+  font-size:1rem;
+}
 }
 
 
@@ -316,6 +354,7 @@ I'm not sure why this is- an optical illusion? */
 
 
 @media (max-width:460px){
+
   .Line1{
     margin-left: 3.125rem;
   }
@@ -329,35 +368,16 @@ I'm not sure why this is- an optical illusion? */
     max-width: 0.9375rem;
     max-height: 0.9375rem;
   }
+
+  
+  p{
+    line-height: 1.5rem;
+  }
   .Main-Grid-Parent{
     font-size:1.1rem;
   }
 
   
-.Nav-Grid-Parent{
-}
-
-
-.Nav-Flex-Parent{
-}
 
 
 }
-
-
-
-/* -----  ----- */ 
-
-
-/* -----  ----- */ 
-
-
-/* ...Nontext styles */ 
-
-
-/* ...Grid styles */ 
-
-
-/* ...Flexbox styles */ 
-
-/* -----  ----- */ 
