@@ -21,13 +21,14 @@ export function mainContentFrame(props){
     );
   }
   
-  function sectionBio(){
+  function sectionAbout(){
     return(
-      <div className="Bio-Grid-Parent Bio-Flex-Parent">
-        <div className="Bio-Text">
+      <div className="About-Grid-Parent About-Flex-Parent">
+        <div className="About-Text">
         <p>Hi, I'm a front-end developer who likes goats, modern European history, and colorful hairstyles.</p>
-        <p>I grew up in Texas, then moved to Portland and worked QA before deciding to become a front-end developer.</p>
-        <p>I love to learn by comparing lots of different things, whether that means comparing different websites' visual designs or countries' histories. I get a big kick out of understanding the possibilities and their nuanced tradeoffs.</p>
+        <div className="Large-View">I grew up in Texas, then moved to Portland and worked QA before deciding to become a front-end developer.</div>
+        <div className="Large-View">I love to learn by comparing lots of different things, whether that means comparing different websites' designs or countries' histories. I get a big kick out of understanding possibilities and their nuanced tradeoffs.</div>
+        <div className="Mobile-View">I love to learn through comparison, whether that means comparing different websites' designs or countries' histories. I get a big kick out of understanding possibilities and their nuanced tradeoffs.</div>
         <p>Let's work together: {emailButton()}</p></div>
       </div>
     );
@@ -44,9 +45,9 @@ export function mainContentFrame(props){
   }
   
   
-  if (mainProp==="Bio"){
+  if (mainProp==="About"){
     return( 
-      <div role="main">{sectionBio()}</div>
+      <div role="main">{sectionAbout()}</div>
    )
   }
   
