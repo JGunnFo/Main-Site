@@ -18,14 +18,15 @@ html {
   font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 1rem;
   color: whitesmoke;
+
   
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 
-  --default-height: 95vh;
-  --default-width: 95vw;
+  --default-height: 90vh;
+  --default-width: 90vw;
   --top-proportion-of-height: .65;
   --bottom-proportion-of-height: .30;
 
@@ -132,8 +133,8 @@ html {
 .About-Text{
   margin: 1.25rem 1.25rem 1.25rem 2.25rem;
   
-  max-height: 30vh;
-  max-width: 60vw;
+  max-height: calc(var(--default-height)*var(--top-proportion-of-height));
+  max-width: 39rem;
 }
 
 p{
@@ -230,7 +231,7 @@ p{
   grid-column-gap: .375rem;
 
   
-  margin: .625rem 0px 0px 10px;
+  margin: .625rem 0px 0px .625rem;
 }
 
 
@@ -317,7 +318,6 @@ p{
   
 
   .About-Text{
-    max-width: 70vw;
   }
 
   .Main-Grid-Parent{
@@ -384,12 +384,11 @@ I'm not sure why this is- an optical illusion? */
     outline-offset: -.25rem;
   }
   .About-Grid-Parent{
-  outline-offset: -.25rem;
+    outline-offset: -.25rem;
   }
 
   .About-Text{
     margin: 0rem 1.25rem 1.25rem 2.25rem;
-    max-width: 80vw;
   }
 
   .Nav-Grid-Parent{
