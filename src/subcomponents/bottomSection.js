@@ -13,7 +13,9 @@ export function navBar(props){
       {switchForSection("About", props)}
       {switchForSection("Main", props)}
       {switchForSection("Github", props)}
-      <div className="Spacer"></div>
+      {switchForSection("Main", props)}
+      {switchForSection("About", props)}
+      {switchForSection("Main", props)}
       </div>
       &nbsp;</div>
     );

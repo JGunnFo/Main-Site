@@ -25,12 +25,12 @@ html {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 
-  --default-height: 90vh;
+  --default-height: 97vh;
   --default-width: 90vw;
-  --top-proportion-of-height: .65;
-  --bottom-proportion-of-height: .30;
+  --top-proportion-of-height: .66;
+  --bottom-proportion-of-height: .29;
 
-  --top-proportion-of-height-2: .68;
+  --top-proportion-of-height-2: .69;
 
 }
 
@@ -43,14 +43,11 @@ html {
 
 .Overall-Grid-Parent{
   display: grid;
-  height: var(--default-height);
-  width: var(--default-width);
   grid-template-rows: calc(var(--default-height)*var(--top-proportion-of-height)) calc(var(--default-height)*var(--bottom-proportion-of-height));
   align-content: start;
 }
 
 .Overall-Grid-Child{
-  justify-self: end;
 }
 
 .Mobile-View{
@@ -106,7 +103,6 @@ html {
   justify-content: stretch;
   justify-items: stretch;
   height: calc(var(--default-height)*var(--top-proportion-of-height));
-  width: var(--default-width);
   gap: .3125rem;
   outline: .1875rem solid rgba(255,255,255,.2);
   outline-offset: -.35rem;
@@ -160,7 +156,6 @@ p{
   display: grid;
   align-content: center;
   height: calc(var(--default-height)*var(--top-proportion-of-height));
-  width: var(--default-width);
   gap: .125rem;
   outline: .1875rem solid rgba(255,255,255,.2);
   outline-offset: -.75rem;
@@ -184,13 +179,11 @@ p{
 .Nav-Selected{
   color: gold;
   text-decoration: underline;
-  margin-right: 2.1875rem;
 }
 
 
 .Nav-Unselected{
-  margin-right: 2.1875rem;
-  color: #6A6A6A
+  color: #6A6A6A;
 }
 
 .asText {
@@ -225,22 +218,20 @@ p{
 .Nav-Grid-Parent{
   
   display: grid;
-  grid-template-rows: repeat(auto-fill, minmax(6.25rem, 1fr));
   height: calc(var(--default-height)*var(--bottom-proportion-of-height));
-  width: var(--default-width);
-  grid-column-gap: .375rem;
+  gap: 1rem 2rem;
+  padding-right:1.5rem;
+  padding-top: 1.25rem;
 
-  
-  margin: .625rem 0px 0px .625rem;
+
 }
-
 
 .Nav-Flex-Parent{
   
   display: flex;
+  flex-direction: row;
   justify-content: flex-end;
   align-items: flex-end;
-  flex-grow: 1;
 }
 
 
@@ -345,7 +336,7 @@ p{
   .Main-Grid-Parent{
     font-size:1.4rem;
   }
-  
+
 
   p{
     line-height: 1.75rem;
@@ -360,6 +351,15 @@ p{
 /* The intent below is for the margins to be the same- but they are slightly off because
 if the margins are the exact same, they look like they're not lined up to me. 
 I'm not sure why this is- an optical illusion? */ 
+
+
+@media (max-width:550px){
+
+  .Nav-Flex-Parent{
+    flex-flow: wrap-reverse;
+  }
+  
+}
 
 
 @media (max-width:460px){
@@ -388,12 +388,11 @@ I'm not sure why this is- an optical illusion? */
   }
 
   .About-Text{
-    margin: 0rem 1.25rem 1.25rem 2.25rem;
+    margin: 0rem 2rem 1.25rem 1rem;
   }
 
   .Nav-Grid-Parent{
-    grid-column-gap: 0rem;
-  
+    padding-right:1rem;
     
   }
   
