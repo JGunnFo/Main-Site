@@ -129,7 +129,6 @@ html {
 .About-Text{
   margin: 1.25rem 1.25rem 1.25rem 2.25rem;
   
-  max-height: calc(var(--default-height)*var(--top-proportion-of-height));
   max-width: 39rem;
 }
 
@@ -221,7 +220,9 @@ p{
   height: calc(var(--default-height)*var(--bottom-proportion-of-height));
   gap: 1rem 2rem;
   padding-right:1.5rem;
-  padding-top: 1.25rem;
+  padding-top: 1rem;
+  justify-content: end;
+  align-items: end;
 
 
 }
@@ -230,8 +231,6 @@ p{
   
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  align-items: flex-end;
 }
 
 
@@ -255,7 +254,7 @@ p{
 }
 
 .svg-icon-marginNorm{
-  margin: 0% 0% 25% 0%;
+  margin: 0% 0% 15% 0%;
 
 }
 
@@ -290,6 +289,16 @@ p{
 }
 
 /* Responsive Adjustments */ 
+
+
+
+
+@media (min-width:950px){
+  .About-Grid-Parent{
+  justify-content: center;
+  align-items: center;
+}
+}
 
 
 @media (max-width:890px){
