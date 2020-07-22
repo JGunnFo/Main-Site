@@ -231,6 +231,7 @@ p{
   
   display: flex;
   flex-direction: row;
+  flex-flow: wrap-reverse;
 }
 
 
@@ -361,14 +362,6 @@ p{
 if the margins are the exact same, they look like they're not lined up to me. 
 I'm not sure why this is- an optical illusion? */ 
 
-
-@media (max-width:550px){
-
-  .Nav-Flex-Parent{
-    flex-flow: wrap-reverse;
-  }
-  
-}
 
 
 @media (max-width:460px){

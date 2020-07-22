@@ -8,3 +8,9 @@ export const initialStateTest={
     section: "Main",
     transition:false
 };
+
+
+export const initialStateTestAbout={
+  section: "About",
+  transition:false
+};

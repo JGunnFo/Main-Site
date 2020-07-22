@@ -5,7 +5,7 @@ import configureMockStore from 'redux-mock-store';
 import { Provider } from "react-redux";
 import { render } from '@testing-library/react';
 import TopComponent from './App';
-import {initialStateTest} from './baselineState';
+import {initialStateTest, initialStateTestAbout} from './baselineState';
 import ReactTestUtils from 'react-dom/test-utils'; // ES6
 
 
@@ -28,7 +28,7 @@ describe('<App />', () => {
   });
   
 
-  it('has 1 child', () => {
+  it('has 2 children: Main and Nav', () => {
     const tree = renderer.create(<App />).toJSON();
     expect(tree.children.length).toBe(2);
   });
@@ -51,6 +51,43 @@ it('renders without crashing', () => {
 it('renders correctly according to snapshot', () => {
   const tree = renderer.create(<App />).toJSON();
   expect(tree).toMatchSnapshot();
+});
+
+
+
+/*
+The following mail text is an excessive test that is quite redundant with snapshots, 
+but I am leaving it here as a sort of "If you're approving snapshot changes 
+and then this happens, you're very likely not paying enough attention during snapshot approval"
+warning trigger.
+*/
+
+it('contains the mail text', () => {
+  const tree = renderer.create(<App />).toJSON();
+  let stringTree=JSON.stringify(tree)
+  expect(stringTree).toEqual(expect.stringContaining('mailto:jeffgunnweb@gmail.com?subject=Edit this subject line to avoid the filter for bots.'));
+});
+
+/*
+Should be separated out as part of a separate battery of tests with their own setup, 
+but leaving it here because the unit testing needs of this are not great, so having
+a perfect unit test setup isnt worth the time at the moment.
+*/
+
+it('renders correctly when About is the start initialstate', () => {
+
+  
+  let mockStoreAbout = configureMockStore()
+  let theStoreAbout=mockStoreAbout(initialStateTestAbout)
+
+  let AppAbout = () => (
+    <Provider store={theStoreAbout}>
+        <TopComponent />
+    </Provider>
+  )
+
+  const treeAbout = renderer.create(<AppAbout />).toJSON();
+  expect(treeAbout).toMatchSnapshot();
 });
 
 });
