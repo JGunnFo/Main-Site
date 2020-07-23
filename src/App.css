@@ -188,10 +188,17 @@ p{
 .asText {
   background:none;
   border:none;
-  padding:0;
-  cursor: pointer;
+  cursor: pointer;   
+  padding: 3rem 0rem 0rem 0rem;     
+  margin: -3rem 0rem 0rem 0rem; 
 }
 
+
+.Nav-Unselected > a {     
+  display: inline-block;     
+  padding: 3rem 0rem 0rem 0rem;     
+  margin: -3rem 0rem 0rem 0rem; 
+}
 
 /* ...Nontext styles */ 
 
@@ -271,10 +278,17 @@ p{
 
 .svg-iconEmailButton {
   display: inline-block;
-  vertical-align: middle;
+  position: relative;
+  top: 0rem;
+  float:center;
   color: lightskyblue;
-  width: 3.1rem;
-  height: 3rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 0rem 0rem 0rem 0rem;
+}
+
+.Line3 > a{
+  position: absolute;
 }
 
 
@@ -290,7 +304,6 @@ p{
 }
 
 /* Responsive Adjustments */ 
-
 
 
 
@@ -316,6 +329,11 @@ p{
     max-width: 1.75rem;
     max-height: 1.75rem;
   }
+  
+.svg-iconEmailButton {
+  top: -0.2rem;
+}
+
   
 
   .About-Text{
@@ -347,6 +365,9 @@ p{
     font-size:1.4rem;
   }
 
+  .svg-iconEmailButton {
+    top: -0.8rem;
+  }
 
   p{
     line-height: 1.75rem;
@@ -358,22 +379,23 @@ p{
 }
 
 
-/* The intent below is for the margins to be the same- but they are slightly off because
-if the margins are the exact same, they look like they're not lined up to me. 
-I'm not sure why this is- an optical illusion? */ 
+/* The reason the margins below are almost the same but not quite, is because
+if the margins are teh exact same, they really look like they're not lined up to me.
+Feels like some sort of optical illusion- so I'm making them slightly off so that they feel right. */
+
 
 
 
 @media (max-width:460px){
 
   .Line1{
-    margin-left: 3.125rem;
+    margin-left: 2.125rem;
   }
   .Line2{
-    margin-left: 3.25rem;
+    margin-left: 2.25rem;
   }
   .Line3{
-    margin-left: 3.375rem;
+    margin-left: 2.375rem;
   }
   .InlineL{
     max-width: 0.9375rem;
@@ -398,6 +420,10 @@ I'm not sure why this is- an optical illusion? */
     
   }
   
+  .svg-iconEmailButton {
+    top: -1rem;
+  }
+
   .Default-Styling{
     font-size: 0.875rem;
   }

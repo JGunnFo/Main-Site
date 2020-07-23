@@ -9,7 +9,7 @@ export function navBar(props){
     return(
       <div className="Nav-Background">
       <div className="Nav-Grid-Parent Nav-Flex-Parent" role="navigation">
-      {resume()}
+      {switchForSection("Resume", props)}
       {switchForSection("About", props)}
       {switchForSection("Main", props)}
       {switchForSection("Github", props)}
@@ -84,6 +84,24 @@ if (passTo==="Resume"){
  use the passto for actions and 
  to determine which icon to display, text, etc
  */
+    if (passTo==="Resume"){
+      return(
+      <div className={navStyle}>
+      {selectSVG("Resume")}
+      <a className="svgLink" href="https://github.com/JGunnFo/" aria-label="Github Link">Résumé</a>
+      </div>
+      )
+    }
+
+    if (passTo==="Github"){
+      return(
+      <div className={navStyle}>
+      {selectSVG("Github")}
+      <a className="svgLink" href="https://github.com/JGunnFo/" aria-label="Github Link">{passTo} </a>
+      </div>
+      )
+    }
+
     return(
       <div>
       {selectSVG(passTo)}
@@ -92,13 +110,4 @@ if (passTo==="Resume"){
     );
   }
   
-  
-  function resume(){
-    return(
-      <div className="Nav-Unselected">
-      {selectSVG("Resume")}
-      Résumé
-      </div>
-    );
-  }
   

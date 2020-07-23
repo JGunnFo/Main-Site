@@ -14,7 +14,8 @@ export function mainContentFrame(props){
   function sectionMain(){
     return(
       <div className="Main-Grid-Parent Main-Flex-Parent">
-        <div className="Main-Text-Emph Line1"><img className="InlineL" src={theL} aria-hidden="true" />React Redux Front-End Developer</div>
+        <div className="Main-Text-Emph Line1 Large-View"><img className="InlineL" src={theL} aria-hidden="true" />React Redux Front-End Developer</div>
+        <div className="Main-Text-Emph Line1 Mobile-View"><img className="InlineL" src={theL} aria-hidden="true" />React Redux Front-End Dev</div>
         <div className="Main-Text-Deemph Line2"><img className="InlineL" src={theL} aria-hidden="true" />Jeffrey Gunn</div>
         <div className="Main-Text-Emph Line3"><img className="InlineL" src={theL}  aria-hidden="true" /> Let's work together. {emailButton()}</div>
       </div>
