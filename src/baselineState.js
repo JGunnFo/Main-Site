@@ -14,3 +14,8 @@ export const initialStateTestAbout={
   section: "About",
   transition:false
 };
+
+
+/*
+No transition code currently implemented.
+*/

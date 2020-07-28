@@ -16,41 +16,41 @@ exports[`<App /> renders correctly according to snapshot 1`] = `
             className="Main-Grid-Parent Main-Flex-Parent"
           >
             <div
-              className="Main-Text-Emph Line1 Large-View"
+              className="Main-Text-Emph Line-1 Large-View"
             >
               <img
                 aria-hidden="true"
-                className="InlineL"
+                className="Inline-L"
                 src="transparent.png"
               />
               React Redux Front-End Developer
             </div>
             <div
-              className="Main-Text-Emph Line1 Mobile-View"
+              className="Main-Text-Emph Line-1 Mobile-View"
             >
               <img
                 aria-hidden="true"
-                className="InlineL"
+                className="Inline-L"
                 src="transparent.png"
               />
               React Redux Front-End Dev
             </div>
             <div
-              className="Main-Text-Deemph Line2 "
+              className="Main-Text-Deemph Line-2 "
             >
               <img
                 aria-hidden="true"
-                className="InlineL"
+                className="Inline-L"
                 src="transparent.png"
               />
               Jeffrey Gunn
             </div>
             <div
-              className="Main-Text-Emph Line3"
+              className="Main-Text-Emph Line-3"
             >
               <img
                 aria-hidden="true"
-                className="InlineL"
+                className="Inline-L"
                 src="transparent.png"
               />
                Let's work together. 
@@ -60,7 +60,7 @@ exports[`<App /> renders correctly according to snapshot 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  className="svg-icon svg-iconEmailButton"
+                  className="Svg-Icon Svg-Icon-Email-Button"
                   viewBox="0 0 20 20"
                 >
                   <path
@@ -86,7 +86,7 @@ exports[`<App /> renders correctly according to snapshot 1`] = `
           <div>
             <svg
               aria-hidden="true"
-              className="svg-icon svg-icon-marginNorm"
+              className="Svg-Icon Svg-Icon-Margin-Norm"
               viewBox="0 0 20 20"
             >
               <path
@@ -95,7 +95,7 @@ exports[`<App /> renders correctly according to snapshot 1`] = `
             </svg>
             <div>
               <button
-                className="Nav-Unselected asText Default-Styling"
+                className="Nav-Unselected As-Text Default-Styling"
                 onClick={[Function]}
               >
                 About
@@ -105,7 +105,7 @@ exports[`<App /> renders correctly according to snapshot 1`] = `
           <div>
             <svg
               aria-hidden="true"
-              className="svg-icon svg-icon-marginNorm"
+              className="Svg-Icon Svg-Icon-Margin-Norm"
               viewBox="0 0 20 20"
             >
               <path
@@ -114,7 +114,7 @@ exports[`<App /> renders correctly according to snapshot 1`] = `
             </svg>
             <div>
               <button
-                className="Nav-Selected asText Default-Styling "
+                className="Nav-Selected As-Text Default-Styling "
                 onClick={[Function]}
               >
                 Main
@@ -122,11 +122,11 @@ exports[`<App /> renders correctly according to snapshot 1`] = `
             </div>
           </div>
           <div
-            className="Nav-Unselected asText Default-Styling"
+            className="Nav-Unselected As-Text Default-Styling"
           >
             <svg
               aria-hidden="true"
-              className="svg-icon svg-icon-marginHigher"
+              className="Svg-Icon Svg-Icon-Margin-Alternate"
               viewBox="0 0 20 20"
             >
               <path
@@ -143,11 +143,11 @@ exports[`<App /> renders correctly according to snapshot 1`] = `
             </a>
           </div>
           <div
-            className="Nav-Unselected asText Default-Styling"
+            className="Nav-Unselected As-Text Default-Styling"
           >
             <svg
               aria-hidden="true"
-              className="svg-icon svg-icon-marginHigher"
+              className="Svg-Icon Svg-Icon-Margin-Alternate"
               viewBox="0 0 1024 770.3333740234375"
             >
               <path
@@ -215,7 +215,7 @@ exports[`<App /> renders correctly when About is the start initialstate 1`] = `
                 >
                   <svg
                     aria-hidden="true"
-                    className="svg-icon svg-iconEmailButton2"
+                    className="Svg-Icon Svg-Icon-Email-Button-2"
                     viewBox="0 0 20 20"
                   >
                     <path
@@ -242,7 +242,7 @@ exports[`<App /> renders correctly when About is the start initialstate 1`] = `
           <div>
             <svg
               aria-hidden="true"
-              className="svg-icon svg-icon-marginNorm"
+              className="Svg-Icon Svg-Icon-Margin-Norm"
               viewBox="0 0 20 20"
             >
               <path
@@ -251,7 +251,7 @@ exports[`<App /> renders correctly when About is the start initialstate 1`] = `
             </svg>
             <div>
               <button
-                className="Nav-Selected asText Default-Styling "
+                className="Nav-Selected As-Text Default-Styling "
                 onClick={[Function]}
               >
                 About
@@ -261,7 +261,7 @@ exports[`<App /> renders correctly when About is the start initialstate 1`] = `
           <div>
             <svg
               aria-hidden="true"
-              className="svg-icon svg-icon-marginNorm"
+              className="Svg-Icon Svg-Icon-Margin-Norm"
               viewBox="0 0 20 20"
             >
               <path
@@ -270,7 +270,7 @@ exports[`<App /> renders correctly when About is the start initialstate 1`] = `
             </svg>
             <div>
               <button
-                className="Nav-Unselected asText Default-Styling"
+                className="Nav-Unselected As-Text Default-Styling"
                 onClick={[Function]}
               >
                 Main
@@ -278,11 +278,11 @@ exports[`<App /> renders correctly when About is the start initialstate 1`] = `
             </div>
           </div>
           <div
-            className="Nav-Unselected asText Default-Styling"
+            className="Nav-Unselected As-Text Default-Styling"
           >
             <svg
               aria-hidden="true"
-              className="svg-icon svg-icon-marginHigher"
+              className="Svg-Icon Svg-Icon-Margin-Alternate"
               viewBox="0 0 20 20"
             >
               <path
@@ -299,11 +299,11 @@ exports[`<App /> renders correctly when About is the start initialstate 1`] = `
             </a>
           </div>
           <div
-            className="Nav-Unselected asText Default-Styling"
+            className="Nav-Unselected As-Text Default-Styling"
           >
             <svg
               aria-hidden="true"
-              className="svg-icon svg-icon-marginHigher"
+              className="Svg-Icon Svg-Icon-Margin-Alternate"
               viewBox="0 0 1024 770.3333740234375"
             >
               <path

@@ -32,10 +32,10 @@ export function mainContentFrame(props){
   function sectionMain(){
     return(
       <div className="Main-Grid-Parent Main-Flex-Parent">
-        <div className="Main-Text-Emph Line1 Large-View"><img className="InlineL" src={theL} aria-hidden="true" />React Redux Front-End Developer</div>
-        <div className="Main-Text-Emph Line1 Mobile-View"><img className="InlineL" src={theL} aria-hidden="true" />React Redux Front-End Dev</div>
-        <div className="Main-Text-Deemph Line2 "><img className="InlineL" src={theL} aria-hidden="true" />Jeffrey Gunn</div>
-        <div className="Main-Text-Emph Line3"><img className="InlineL" src={theL}  aria-hidden="true" /> Let's work together. {emailButton("Main")}</div>
+        <div className="Main-Text-Emph Line-1 Large-View"><img className="Inline-L" src={theL} aria-hidden="true" />React Redux Front-End Developer</div>
+        <div className="Main-Text-Emph Line-1 Mobile-View"><img className="Inline-L" src={theL} aria-hidden="true" />React Redux Front-End Dev</div>
+        <div className="Main-Text-Deemph Line-2 "><img className="Inline-L" src={theL} aria-hidden="true" />Jeffrey Gunn</div>
+        <div className="Main-Text-Emph Line-3"><img className="Inline-L" src={theL}  aria-hidden="true" /> Let's work together. {emailButton("Main")}</div>
       </div>
     );
   }
@@ -59,9 +59,9 @@ export function mainContentFrame(props){
   function emailButton(location){
     let style
       if (location==="Main"){
-        style="svg-icon svg-iconEmailButton"
+        style="Svg-Icon Svg-Icon-Email-Button"
     }else{
-      style="svg-icon svg-iconEmailButton2"
+      style="Svg-Icon Svg-Icon-Email-Button-2"
     }
   
       return( 
