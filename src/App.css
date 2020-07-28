@@ -50,6 +50,8 @@ html {
   align-content: start;
 }
 
+.Overall-Grid-Child{
+}
 
 .Mobile-View{
   display: none;
@@ -66,8 +68,8 @@ html {
 
 .Main-Text-Deemph{
   color:#A3A3A3;
-}
 
+}
 
 .Line-1{
   margin-left: 6.25rem;
@@ -123,14 +125,9 @@ html {
 
 /* ----- Top Section, for when About is selected  ----- */ 
 
-
-
 .About-Text{
   margin: 1.25rem 1.25rem 1.25rem 2.25rem;
-/*
-This max width is to make sure lines arent too many characters,
-to make readability better. 
-*/
+  
   max-width: 39rem;
 }
 
@@ -282,11 +279,7 @@ Especially helpful on mobile.
   margin-bottom: 10%;
 }
 
-/*
-Alternate is currently used for the Github and Resume buttons, to fine tune their appearance a bit.
-*/
-
-.Svg-Icon-Margin-Alternate{
+.Svg-Icon-Margin-Higher{
   display: block;
   margin: auto;
   margin-bottom: 5%;
@@ -316,8 +309,8 @@ Alternate is currently used for the Github and Resume buttons, to fine tune thei
 
 
 /*
-Below styling is here to make the email button not take up space(to make certain other things easier) via absolute,
-while also still making the email button's spacing relative via the position setting in the above two styles.
+Below styling is here to make the email button not take up space(to make certain other things easier) while also still
+making the email button's spacing relative in the above two styles.
 */
 .Line-3 > a, p > a{
   position: absolute;
@@ -333,6 +326,7 @@ while also still making the email button's spacing relative via the position set
   .About-Grid-Parent{
     font-size: 1.375rem;
 }
+
   .About-Text{
     max-width: 48rem;
   }
@@ -421,7 +415,7 @@ while also still making the email button's spacing relative via the position set
 
 
 /* The reason the margins below are almost the same but not quite, is because
-if the margins are the exact same, they really look like they're not lined up to me.
+if the margins are teh exact same, they really look like they're not lined up to me.
 Feels like some sort of optical illusion- so I'm making them slightly off so that they feel right. */
 
 
