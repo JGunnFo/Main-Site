@@ -241,7 +241,6 @@ Especially helpful on mobile.
 }
 
 .Nav-Flex-Parent{
-  
   display: flex;
   flex-direction: row;
   flex-flow: wrap-reverse;
@@ -279,7 +278,7 @@ Especially helpful on mobile.
   margin-bottom: 10%;
 }
 
-.Svg-Icon-Margin-Higher{
+.Svg-Icon-Margin-Alternate{
   display: block;
   margin: auto;
   margin-bottom: 5%;
