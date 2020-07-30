@@ -13,7 +13,7 @@ exports[`<App /> renders correctly according to snapshot 1`] = `
           role="main"
         >
           <div
-            className="Main-Grid-Parent Main-Flex-Parent"
+            className="Main-Flex-Parent"
           >
             <div
               className="Main-Text-Emph Line-1 Large-View"
@@ -80,7 +80,7 @@ exports[`<App /> renders correctly according to snapshot 1`] = `
         className="Nav-Background"
       >
         <div
-          className="Nav-Grid-Parent Nav-Flex-Parent"
+          className="Nav-Flex-Parent"
           role="navigation"
         >
           <div>
@@ -183,7 +183,7 @@ exports[`<App /> renders correctly when About is the start initialstate 1`] = `
           role="main"
         >
           <div
-            className="About-Grid-Parent About-Flex-Parent"
+            className="About-Flex-Parent"
           >
             <div
               className="About-Text"
@@ -235,7 +235,7 @@ exports[`<App /> renders correctly when About is the start initialstate 1`] = `
         className="Nav-Background"
       >
         <div
-          className="Nav-Grid-Parent Nav-Flex-Parent"
+          className="Nav-Flex-Parent"
           role="navigation"
         >
           <div>

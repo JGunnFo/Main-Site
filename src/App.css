@@ -13,7 +13,7 @@ html {
 
 .Default-Styling {
   background: -webkit-linear-gradient(white, white 0%, black 0%, #121212, black  calc(var(--default-height)*var(--top-proportion-of-height-BG-end)), white  calc(var(--default-height)*var(--top-proportion-of-height-BG-end)), white);
-  margin: 1;
+  margin: 8px;
 
   font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 1rem;
@@ -107,14 +107,11 @@ html {
   font-size:2.5rem;
 }
 
-.Main-Flex-Child{
-  flex-grow: 1;
-}
 
 
 .Inline-L{
   display: inline;
-  position: fixed;
+  position: absolute;
   margin-left: -.5625rem;
   padding-top: 1.0625rem;
 }
@@ -187,14 +184,6 @@ a:visited, a:link{
   text-decoration: none;
 }
 
-
-/*
-The two styles below are here to 
-make the links(a) and nonlink navbar buttons(asText)
-have larger clickable areas so that the SVGs can be clicked.
-Especially helpful on mobile.
-*/
-
 .As-Text {
   background:none;
   border:none;
@@ -202,6 +191,12 @@ Especially helpful on mobile.
   padding: 3rem 0rem 0rem 0rem;     
   margin: -3rem 0rem 0rem 0rem; 
 }
+
+/*
+The style below makes make the links
+have larger clickable areas so that the SVGs can be clicked.
+Especially helpful on mobile.
+*/
 
 
 .Nav-Unselected > a {     
@@ -311,7 +306,7 @@ making the email button's spacing relative in the above two styles.
 
 
 @media (min-width:1400px) and (min-height: 850px){
-  .About-Grid-Parent{
+  .About-Flex-Parent{
     font-size: 1.375rem;
 }
 
@@ -333,7 +328,7 @@ making the email button's spacing relative in the above two styles.
 @media (max-width:890px){
 
 
-  .Main-Grid-Parent{
+  .Main-Flex-Parent{
     font-size:2rem;
   }
 
@@ -367,7 +362,7 @@ making the email button's spacing relative in the above two styles.
 @media (max-width:760px){
 
 
-  .Main-Grid-Parent{
+  .Main-Flex-Parent{
     font-size:1.4rem;
   }
 
@@ -390,7 +385,7 @@ making the email button's spacing relative in the above two styles.
     bottom: 0.8rem;
   }
 
-  .About-Grid-Parent{
+  .About-Flex-Parent{
     font-size:1rem;
   }
 
@@ -419,7 +414,7 @@ Feels like some sort of optical illusion- so I'm making them slightly off so tha
 
   This has an unfortunate side effect of making it look worse when a desktop user resizes their browser window
   to be small, since the navbar won't hug the corner which makes it look nicer,
-  but usage in a resized browser window is fairly niche for this site so I'm ignoring it for now.
+  but usage in a resized browser window is a minor concern for this site so I'm ignoring it for now.
   */
   
   .Default-Styling{
@@ -445,22 +440,26 @@ but for now I would rather just define the font size in fewer locations for less
   
   .Main-Flex-Parent{
     height: calc(var(--default-height)*var(--top-proportion-of-height-phone));
+    font-size:1.1rem;
+    outline-offset: -.25rem;
 
   }
   .About-Flex-Parent{
     height: calc(var(--default-height)*var(--top-proportion-of-height-phone));
+    outline-offset: -.25rem;
   }
-  .Nav-Flex-Parent{
-    height: calc(var(--default-height)*var(--bottom-proportion-of-height-phone));
+  
+  .About-Text{    
+    margin: 0rem 0rem 0.25rem 1rem;
   }
 
+  .Nav-Flex-Parent{
+    height: calc(var(--default-height)*var(--bottom-proportion-of-height-phone));
+    padding-right:1rem;
+  }
     
 
 
-  .Main-Grid-Parent{
-    font-size:1.1rem;
-    outline-offset: -.25rem;
-  }
   .Line-1{
     margin-left: 2.125rem;
   }
@@ -481,17 +480,6 @@ but for now I would rather just define the font size in fewer locations for less
 
   .Svg-Icon-Email-Button-2{
     bottom: 0.9rem;
-  }
-  .About-Grid-Parent{
-    outline-offset: -.25rem;
-  }
-
-  .About-Text{    margin: 0rem 0rem 0.25rem 1rem;
-  }
-
-  .Nav-Grid-Parent{
-    padding-right:1rem;
-    
   }
 
   .Large-View{

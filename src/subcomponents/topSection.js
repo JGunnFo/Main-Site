@@ -31,7 +31,7 @@ export function mainContentFrame(props){
   }
   function sectionMain(){
     return(
-      <div className="Main-Grid-Parent Main-Flex-Parent">
+      <div className="Main-Flex-Parent">
         <div className="Main-Text-Emph Line-1 Large-View"><img className="Inline-L" src={theL} aria-hidden="true" />React Redux Front-End Developer</div>
         <div className="Main-Text-Emph Line-1 Mobile-View"><img className="Inline-L" src={theL} aria-hidden="true" />React Redux Front-End Dev</div>
         <div className="Main-Text-Deemph Line-2 "><img className="Inline-L" src={theL} aria-hidden="true" />Jeffrey Gunn</div>
@@ -42,7 +42,7 @@ export function mainContentFrame(props){
   
   function sectionAbout(){
     return(
-      <div className="About-Grid-Parent About-Flex-Parent">
+      <div className="About-Flex-Parent">
         <div className="About-Text">
         <p>Hi, I'm a front-end developer who likes goats and modern European history.</p>
         <div className="Large-View">I grew up in Texas, then moved to Portland and worked QA before deciding to become a front-end developer.</div>

@@ -69,7 +69,7 @@ it('contains the mail text', () => {
 });
 
 /*
-Should be separated out as part of a separate battery of tests with their own setup, 
+Below should be separated out as part of a separate battery of tests with their own setup, 
 but leaving it here because the unit testing needs of this are not great, so having
 a perfect unit test setup isnt worth the time at the moment.
 */

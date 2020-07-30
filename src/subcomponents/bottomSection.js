@@ -8,7 +8,7 @@ import { GOTO, GoTo} from "../Actions";
 export function navBar(props){
     return(
       <div className="Nav-Background">
-      <div className="Nav-Grid-Parent Nav-Flex-Parent" role="navigation">
+      <div className="Nav-Flex-Parent" role="navigation">
       {navBarButton("About", props)}
       {navBarButton("Main", props)}
       {navBarButton("Resume", props)}
