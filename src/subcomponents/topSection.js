@@ -44,7 +44,7 @@ export function mainContentFrame(props){
     return(
       <div className="About-Grid-Parent About-Flex-Parent">
         <div className="About-Text">
-        <p>Hi, I'm a front-end developer who likes goats, modern European history, and colorful hairstyles.</p>
+        <p>Hi, I'm a front-end developer who likes goats and modern European history.</p>
         <div className="Large-View">I grew up in Texas, then moved to Portland and worked QA before deciding to become a front-end developer.</div>
         <div className="Large-View">I love to learn by comparing lots of different things, whether that means comparing different websites' designs or countries' histories. I get a big kick out of understanding possibilities and their nuanced tradeoffs.</div>
         <div className="Mobile-View">I love to learn through comparison, whether that means comparing different websites' designs or countries' histories. I get a big kick out of understanding possibilities and their nuanced tradeoffs.</div>

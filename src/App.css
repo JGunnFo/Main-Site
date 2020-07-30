@@ -27,10 +27,10 @@ html {
 
   --default-height: 97vh;
   --default-width: 90vw;
-  --top-proportion-of-height: .66;
+  --top-proportion-of-height: .53;
   --bottom-proportion-of-height: .29;
 
-  --top-proportion-of-height-2: .69;
+  --top-proportion-of-height-2: .56;
 
   --secondary_color:#FFBF49;
   --tertiary_color:#FD4855;
@@ -89,17 +89,6 @@ html {
 /* ...Nontext styles */ 
 
 
-.Main-Grid-Parent{
-  display: grid;
-  justify-content: stretch;
-  justify-items: stretch;
-  height: calc(var(--default-height)*var(--top-proportion-of-height));
-  gap: .3125rem;
-  outline-offset: -.35rem;
-  font-size:2.5rem;
-}
-
-
 
 
 .Main-Flex-Parent{
@@ -107,6 +96,11 @@ html {
   justify-content: space-evenly;
   flex-direction: column;
   flex-basis: 100%;
+  justify-items: stretch;
+  height: calc(var(--default-height)*var(--top-proportion-of-height));
+  gap: .3125rem;
+  outline-offset: -.35rem;
+  font-size:2.5rem;
 }
 
 .Main-Flex-Child{
@@ -142,9 +136,12 @@ p{
 
 /* ...Nontext styles */ 
 
-.About-Grid-Parent{
+
+.About-Flex-Parent{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
   
-  display: grid;
   align-content: center;
   height: calc(var(--default-height)*var(--top-proportion-of-height));
   gap: .125rem;
@@ -153,13 +150,6 @@ p{
   
   justify-content: center;
   align-items: center;
-}
-
-
-.About-Flex-Parent{
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
 }
 
 
@@ -226,26 +216,23 @@ Especially helpful on mobile.
 
 
 
-
-.Nav-Grid-Parent{
-  
-  display: grid;
-  height: calc(var(--default-height)*var(--bottom-proportion-of-height));
-  gap: 1rem 2rem;
-  padding-right:1.5rem;
-  padding-top: 1rem;
-  justify-content: end;
-  align-items: end;
-
-
-}
-
 .Nav-Flex-Parent{
   display: flex;
   flex-direction: row;
-  flex-flow: wrap-reverse;
+  flex-flow: wrap;
+  height: calc(var(--default-height)*var(--bottom-proportion-of-height));
+  padding-right:1.5rem;
+  padding-top: 1rem;
+  justify-content: flex-end;
+  align-items: flex-end;
+  align-content: flex-end;
+  margin-left: -2rem;
 }
 
+
+.Nav-Flex-Child{
+  margin: 0 0 0 2rem;
+}
 
 
 /* SVG */ 
@@ -457,8 +444,7 @@ Feels like some sort of optical illusion- so I'm making them slightly off so tha
     outline-offset: -.25rem;
   }
 
-  .About-Text{
-    margin: 0rem 2rem 1.25rem 1rem;
+  .About-Text{    margin: 0rem 0rem 0.25rem 1rem;
   }
 
   .Nav-Grid-Parent{

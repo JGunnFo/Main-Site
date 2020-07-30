@@ -14,7 +14,7 @@ export function navBar(props){
       {navBarButton("Resume", props)}
       {navBarButton("Github", props)}
       </div>
-      &nbsp;</div>
+      </div>
     );
   }
 
@@ -28,9 +28,9 @@ and the function will get the html right and call the svg function appropriately
 
     let navStyle
     if (props.section===passTo){
-      navStyle="Nav-Selected As-Text Default-Styling "
+      navStyle="Nav-Selected As-Text Default-Styling Nav-Flex-Child"
     } else {
-      navStyle="Nav-Unselected As-Text Default-Styling"
+      navStyle="Nav-Unselected As-Text Default-Styling Nav-Flex-Child"
     }
  
     if (passTo==="Resume"){
@@ -53,8 +53,7 @@ and the function will get the html right and call the svg function appropriately
 
     return(
       <div>
-      {selectSVG(passTo)}
-      <div><button className={navStyle} onClick={() => {props.dispatch(GoTo(passTo))}}>{passTo}</button></div>
+      <div><button className={navStyle} onClick={() => {props.dispatch(GoTo(passTo))}}>{selectSVG(passTo)}{passTo}</button></div>
       </div>
     );
   }
