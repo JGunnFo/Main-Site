@@ -12,7 +12,7 @@ html {
 
 
 .Default-Styling {
-  background: -webkit-linear-gradient(white, white 0%, black 0%, #121212, black  calc(var(--default-height)*var(--top-proportion-of-height-2)), white  calc(var(--default-height)*var(--top-proportion-of-height-2)), white);
+  background: -webkit-linear-gradient(white, white 0%, black 0%, #121212, black  calc(var(--default-height)*var(--top-proportion-of-height-BG-end)), white  calc(var(--default-height)*var(--top-proportion-of-height-BG-end)), white);
   margin: 1;
 
   font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -27,10 +27,14 @@ html {
 
   --default-height: 97vh;
   --default-width: 90vw;
-  --top-proportion-of-height: .53;
+  --top-proportion-of-height: .66;
   --bottom-proportion-of-height: .29;
+  --top-proportion-of-height-BG-end: .69;
 
-  --top-proportion-of-height-2: .56;
+  --top-proportion-of-height-phone: .53;
+  --bottom-proportion-of-height-phone: .29;
+  --top-proportion-of-height-BG-end-phone: .56;
+
 
   --secondary_color:#FFBF49;
   --tertiary_color:#FD4855;
@@ -139,10 +143,8 @@ p{
 
 .About-Flex-Parent{
   display: flex;
-  flex-direction: column;
   flex-basis: 100%;
   
-  align-content: center;
   height: calc(var(--default-height)*var(--top-proportion-of-height));
   gap: .125rem;
   outline-offset: -.75rem;
@@ -409,11 +411,51 @@ Feels like some sort of optical illusion- so I'm making them slightly off so tha
 
 @media (max-width:460px){
 
-  
+
+  /*
+  This(in conjunctino with the variables defined up top)
+  makes the page's proportions(background, section sizes) fit better on small devices, due to how those proportions
+  work in practice rather than just simply being about sheer resolution size.
+
+  This has an unfortunate side effect of making it look worse when a desktop user resizes their browser window
+  to be small, since the navbar won't hug the corner which makes it look nicer,
+  but usage in a resized browser window is fairly niche for this site so I'm ignoring it for now.
+  */
   
   .Default-Styling{
     font-size: 0.875rem;
+    background: -webkit-linear-gradient(white, white 0%, black 0%, #121212, black  calc(var(--default-height)*var(--top-proportion-of-height-BG-end-phone)), white  calc(var(--default-height)*var(--top-proportion-of-height-BG-end-phone)), white);
   }
+
+/*
+As-text is here to reassert its background rule over the media querie'd default styling.
+The alternative is to separate out what I want from Default-Styling for the navbar button styling
+and make the navbars not have default-style reapplied to them(since buttons dont inherit default styling, thus
+why they have the style in the first place- to inherit font information).
+but for now I would rather just define the font size in fewer locations for less confusion.
+*/
+
+  .As-Text{
+    background: none;
+  }
+
+  .Overall-Grid-Parent{
+    grid-template-rows: calc(var(--default-height)*var(--top-proportion-of-height-phone)) calc(var(--default-height)*var(--bottom-proportion-of-height-phone));
+  }
+  
+  .Main-Flex-Parent{
+    height: calc(var(--default-height)*var(--top-proportion-of-height-phone));
+
+  }
+  .About-Flex-Parent{
+    height: calc(var(--default-height)*var(--top-proportion-of-height-phone));
+  }
+  .Nav-Flex-Parent{
+    height: calc(var(--default-height)*var(--bottom-proportion-of-height-phone));
+  }
+
+    
+
 
   .Main-Grid-Parent{
     font-size:1.1rem;
