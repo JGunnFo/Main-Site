@@ -45,8 +45,9 @@ html {
 
 .Hover-Color:hover{
   color: blue;
-  fill: blue;
 }
+
+
 
 
 
@@ -279,6 +280,7 @@ Will be changed later.
   color: var(--secondary_color);
   width: 3.5rem;
   height: 3.5rem;
+  left: 0.5rem;
 }
 
 .Svg-Icon-Email-Button-2 {
@@ -288,7 +290,8 @@ Will be changed later.
   color: var(--secondary_color);
   width: 3.5rem;
   height: 3.5rem;
-  bottom: 0.7rem;
+  bottom: 0.8rem;
+  left: 0.5rem;
 }
 
 
@@ -297,16 +300,29 @@ Below styling is here to make the email button not take up space(to make certain
 making the email button's spacing relative in the above two styles.
 It also makes the "Let's work together" text clickable(triggering the email button), for now.
 */
-.Line-3 > a, p > a{
+
+.About-Email-Line{
+  max-width: 16rem;
+  margin-top: 1.5rem;
+}
+
+.Line-3 > a{
   position: absolute;
   padding-left: 28rem;
   margin-left: -28rem;
 }
 
-p > a{
+.About-Email-Line > a{
   position: absolute;
   padding-left: 12rem;
   margin-left: -12rem;
+}
+
+
+.Svg-Icon:hover .Nav-Unselected,
+.Hover-Color:hover .Svg-Icon-Email-Button,
+.About-Email-Line:hover  .Svg-Icon-Email-Button-2{
+  color: blue;
 }
 
 
@@ -360,7 +376,7 @@ p > a{
 }
 
 .Svg-Icon-Email-Button-2{
-  bottom: 0.8rem;
+  bottom: 1rem;
 }
 
   

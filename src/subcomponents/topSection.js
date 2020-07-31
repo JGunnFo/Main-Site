@@ -35,7 +35,7 @@ export function mainContentFrame(props){
         <div className="Main-Text-Emph Line-1 Large-View"><img className="Inline-L" src={theL} aria-hidden="true" />React Redux Front-End Developer</div>
         <div className="Main-Text-Emph Line-1 Mobile-View"><img className="Inline-L" src={theL} aria-hidden="true" />React Redux Front-End Dev</div>
         <div className="Main-Text-Deemph Line-2 "><img className="Inline-L" src={theL} aria-hidden="true" />Jeffrey Gunn</div>
-        <div className="Main-Text-Emph Line-3"><img className="Inline-L" src={theL}  aria-hidden="true" /> Let's work together. &nbsp;{emailButton("Main")}</div>
+        <div className="Main-Text-Emph Line-3 Hover-Color"><img className="Inline-L" src={theL}  aria-hidden="true" /> Let's work together.{emailButton("Main")}</div>
       </div>
     );
   }
@@ -48,7 +48,7 @@ export function mainContentFrame(props){
         <div className="Large-View">I grew up in Texas, then moved to Portland and worked QA before deciding to become a front-end developer.</div>
         <div className="Large-View">I love to learn by comparing lots of different things, whether that means comparing different websites' designs or countries' histories. I get a big kick out of understanding possibilities and their nuanced tradeoffs.</div>
         <div className="Mobile-View">I love to learn through comparison, whether that means comparing different websites' designs or countries' histories. I get a big kick out of understanding possibilities and their nuanced tradeoffs.</div>
-        <p>Let's work together: {emailButton("About")}</p></div>
+        <div className="Hover-Color About-Email-Line">Let's work together: {emailButton("About")}</div></div>
       </div>
     );
   }
