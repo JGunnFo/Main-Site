@@ -28,16 +28,16 @@ and the function will get the html right and call the svg function appropriately
 
     let navStyle
     if (props.section===passTo){
-      navStyle="Nav-Selected As-Text Default-Styling Nav-Flex-Child"
+      navStyle="Nav-Selected As-Text Default-Styling Nav-Flex-Child Hover-Color"
     } else {
-      navStyle="Nav-Unselected As-Text Default-Styling Nav-Flex-Child"
+      navStyle="Nav-Unselected As-Text Default-Styling Nav-Flex-Child Hover-Color"
     }
  
     if (passTo==="Resume"){
       return(
       <div className={navStyle}>
       {selectSVG("Resume")}
-      <a className="svgLink" href="https://github.com/JGunnFo/" aria-label="Github Link">Résumé</a>
+      <a className="Hover-Color" href="https://github.com/JGunnFo/" aria-label="Resumé Link">Résumé</a>
       </div>
       )
     }
@@ -46,7 +46,7 @@ and the function will get the html right and call the svg function appropriately
       return(
       <div className={navStyle}>
       {selectSVG("Github")}
-      <a className="svgLink" href="https://github.com/JGunnFo/" aria-label="Github Link">{passTo} </a>
+      <a className="Hover-Color" href="https://github.com/JGunnFo/" aria-label="Github Link">{passTo} </a>
       </div>
       )
     }

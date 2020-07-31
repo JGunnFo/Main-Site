@@ -226,9 +226,19 @@ Especially helpful on mobile.
   margin-left: -2rem;
 }
 
+/*
+For now, Nav-Flex-Child's margins are not merged into as-text because of
+differences between about/man vs resume/github for how exactly the styling plays out,
+due to about/main being buttons, which have some idiosyncrasies.
+*/
 
 .Nav-Flex-Child{
   margin: 0 0 0 2rem;
+}
+
+.Hover-Color:hover{
+  color: blue;
+  fill: blue;
 }
 
 
@@ -240,7 +250,6 @@ Especially helpful on mobile.
   display: flex; 
   width: 2.1rem;
   height: 2rem;
-  color: #6e6e6e;
 }
 
 
@@ -251,7 +260,7 @@ Especially helpful on mobile.
 }
 
 .Svg-Icon circle {
-  stroke: black;
+  stroke: currentColor;
   stroke-width: 1;
 }
 

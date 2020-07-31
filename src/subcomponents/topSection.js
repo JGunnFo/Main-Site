@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css';
 import { connect } from "react-redux";
-import { GOTO, goTo} from "../Actions";
+import { GOTO, GoTo} from "../Actions";
 import theL from './transparent.png';
 
 
@@ -59,9 +59,9 @@ export function mainContentFrame(props){
   function emailButton(location){
     let style
       if (location==="Main"){
-        style="Svg-Icon Svg-Icon-Email-Button"
+        style="Svg-Icon Svg-Icon-Email-Button Hover-Color"
     }else{
-      style="Svg-Icon Svg-Icon-Email-Button-2"
+      style="Svg-Icon Svg-Icon-Email-Button-2 Hover-Color"
     }
   
       return( 
