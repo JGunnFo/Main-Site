@@ -43,8 +43,10 @@ html {
 
 
 
-
-
+.Hover-Color:hover{
+  color: blue;
+  fill: blue;
+}
 
 
 
@@ -192,12 +194,6 @@ a:visited, a:link{
   margin: -3rem 0rem 0rem 0rem; 
 }
 
-/*
-The style below makes make the links
-have larger clickable areas so that the SVGs can be clicked.
-Especially helpful on mobile.
-*/
-
 
 .Nav-Unselected > a {     
   display: inline-block;     
@@ -230,15 +226,11 @@ Especially helpful on mobile.
 For now, Nav-Flex-Child's margins are not merged into as-text because of
 differences between about/man vs resume/github for how exactly the styling plays out,
 due to about/main being buttons, which have some idiosyncrasies.
+Will be changed later.
 */
 
 .Nav-Flex-Child{
   margin: 0 0 0 2rem;
-}
-
-.Hover-Color:hover{
-  color: blue;
-  fill: blue;
 }
 
 
@@ -303,11 +295,19 @@ due to about/main being buttons, which have some idiosyncrasies.
 /*
 Below styling is here to make the email button not take up space(to make certain other things easier) while also still
 making the email button's spacing relative in the above two styles.
+It also makes the "Let's work together" text clickable(triggering the email button), for now.
 */
 .Line-3 > a, p > a{
   position: absolute;
+  padding-left: 28rem;
+  margin-left: -28rem;
 }
 
+p > a{
+  position: absolute;
+  padding-left: 12rem;
+  margin-left: -12rem;
+}
 
 
 /* Responsive Adjustments */ 
