@@ -12,29 +12,40 @@ html {
 
 
 .Default-Styling {
-  background: -webkit-linear-gradient(white, white 0%, black 0%, #121212, black  calc(var(--default-height)*var(--top-proportion-of-height-2)), white  calc(var(--default-height)*var(--top-proportion-of-height-2)), white);
-  margin: 1;
+  background: -webkit-linear-gradient(white, white 0%, black 0%, #121212, black  calc(var(--default-height)*var(--top-proportion-of-height-BG-end)), white  calc(var(--default-height)*var(--top-proportion-of-height-BG-end)), white);
+  margin: 8px;
 
   font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 1rem;
   color: whitesmoke;
+
   
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 
-  --default-height: 95vh;
-  --default-width: 95vw;
-  --top-proportion-of-height: .65;
-  --bottom-proportion-of-height: .30;
+  --default-height: 97vh;
+  --default-width: 90vw;
+  --top-proportion-of-height: .66;
+  --bottom-proportion-of-height: .29;
+  --top-proportion-of-height-BG-end: .69;
 
-  --top-proportion-of-height-2: .68;
+  --top-proportion-of-height-phone: .53;
+  --bottom-proportion-of-height-phone: .29;
+  --top-proportion-of-height-BG-end-phone: .56;
+
+
+  --secondary_color:#FFBF49;
+  --tertiary_color:#FD4855;
 
 }
 
 
 
+.Hover-Color:hover{
+  color: blue;
+}
 
 
 
@@ -42,20 +53,22 @@ html {
 
 .Overall-Grid-Parent{
   display: grid;
-  height: var(--default-height);
-  width: var(--default-width);
   grid-template-rows: calc(var(--default-height)*var(--top-proportion-of-height)) calc(var(--default-height)*var(--bottom-proportion-of-height));
   align-content: start;
 }
 
 .Overall-Grid-Child{
-  justify-self: end;
 }
 
-/* ----- Top Section, for Main ----- */ 
+.Mobile-View{
+  display: none;
+}
+
+
+
+/* ----- Top Section, for when Main is selected ----- */ 
 
 .Main-Text-Emph{
-  font-style: bold;
 }
 
 
@@ -65,48 +78,22 @@ html {
 
 }
 
-.Line1{
+.Line-1{
   margin-left: 6.25rem;
 }
 
-.Line2{
+.Line-2{
   margin-left: 12.5rem;
 
 }
 
-.Line3{
+.Line-3{
   margin-left: 18.75rem;
 
 }
 
 
-.InlineL{
-  display: inline;
-  position: fixed;
-  margin-left: -.5625rem;
-  padding-top: 1.0625rem;
-}
-
-
 /* ...Nontext styles */ 
-
-
-.Main-Email-Button{
-  
-}
-
-
-.Main-Grid-Parent{
-  display: grid;
-  justify-content: stretch;
-  justify-items: stretch;
-  height: calc(var(--default-height)*var(--top-proportion-of-height));
-  width: var(--default-width);
-  gap: .3125rem;
-  outline: .1875rem solid rgba(255,255,255,.2);
-  outline-offset: -.75rem;
-  font-size:2.5rem;
-}
 
 
 
@@ -116,241 +103,432 @@ html {
   justify-content: space-evenly;
   flex-direction: column;
   flex-basis: 100%;
+  justify-items: stretch;
+  height: calc(var(--default-height)*var(--top-proportion-of-height));
+  gap: .3125rem;
+  font-size:2.5rem;
 }
 
-.Main-Flex-Child{
-  flex-grow: 1;
+
+
+.Inline-L{
+  display: inline;
+  position: absolute;
+  margin-left: -.5625rem;
+  padding-top: 1.0625rem;
 }
 
 
 
-/* ----- Top Section, for Bio  ----- */ 
-.Bio-Text{
+/* ----- Top Section, for when About is selected  ----- */ 
+
+.About-Text{
+  margin: 1.25rem 1.25rem 1.25rem 2.25rem;
+  
+  max-width: 39rem;
 }
 
+p{
+  line-height: 2rem;
+}
+
+.Large-View{
+  line-height: 2rem;
+}
 
 
 /* ...Nontext styles */ 
 
-.Bio-Photo{
+
+.About-Flex-Parent{
+  display: flex;
+  flex-basis: 100%;
   
+  height: calc(var(--default-height)*var(--top-proportion-of-height));
+  gap: .125rem;
+  font-size:1.125rem;
+  
+  justify-content: center;
+  align-items: center;
 }
 
 
-.Bio-Grid-Parent{
-  
-}
 
-
-.Bio-Flex-Parent{
-  
-}
+/* ----- Lower Half, mainly Navbar ----- */ 
 
 /* ----- Navbar ----- */ 
 
-.Nav-Background{
-  color: #6A6A6A;
-}
+
 
 
 .Nav-Selected{
-  color: gold;
-  text-decoration: underline;
-  margin-right: 2.1875rem;
+  color: var(--tertiary_color);
+  
 }
 
 
 .Nav-Unselected{
-  margin-right: 2.1875rem;
+  color: #6A6A6A;
 }
 
+
+/*
+Adjusting the color of links. Reasoning:
+Few visitable links and they're all on the navbar,
+so their clickability will be obvious, and color differences for clicked links
+would have negligible function gain vs a little bit of impact on the attention flow 
+and color design of the page. 
+*/
+
+a:visited, a:link{
+  color: #6A6A6A;
+  text-decoration: none;
+}
+
+.As-Text {
+  background:none;
+  border:none;
+  cursor: pointer;   
+  padding: 3rem 0rem 0rem 0rem;     
+  margin: -3rem 0rem 0rem 0rem; 
+}
+
+
+.Nav-Unselected > a {     
+  display: inline-block;     
+  padding: 3rem 0rem 0rem 0rem;     
+  margin: -3rem 0rem 0rem 0rem; 
+}
 
 /* ...Nontext styles */ 
 
 
-.Nav-Icon{
-  
+.Nav-Background{
 }
 
-
-
-
-.Nav-Light-Icon{
-  
-}
-
-
-
-
-.Nav-Grid-Parent{
-  
-  display: grid;
-  grid-template-rows: repeat(auto-fill, minmax(6.25rem, 1fr));
-  height: calc(var(--default-height)*var(--bottom-proportion-of-height));
-  width: var(--default-width);
-  grid-column-gap: .375rem;
-
-  
-  margin: .625rem 0px 0px 0px;
-}
 
 
 .Nav-Flex-Parent{
-  
   display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  height: calc(var(--default-height)*var(--bottom-proportion-of-height));
+  padding-right:1.5rem;
+  padding-top: 1rem;
   justify-content: flex-end;
   align-items: flex-end;
-  flex-grow: 1;
+  align-content: flex-end;
+  margin-left: -2rem;
 }
 
+/*
+For now, Nav-Flex-Child's margins are not merged into as-text because of
+differences between about/man vs resume/github for how exactly the styling plays out,
+due to about/main being buttons, which have some idiosyncrasies.
+Will be changed later.
+*/
 
-
-.Spacer {
-  margin: 0px -.625rem 0px 0px;
+.Nav-Flex-Child{
+  margin: 0 0 0 2rem;
 }
-
 
 
 /* SVG */ 
 
 
 
-.svg-icon {
+.Svg-Icon {
   display: flex; 
-  justify-content: center; 
   width: 2.1rem;
   height: 2rem;
-  color: #6e6e6e;
-}
-
-.svg-icon-marginNorm{
-  margin: 0% 0% 25% 0%;
-
-}
-
-.svg-icon-marginResume{
-  margin: 0% 0% 5% 15%;
-  
-}
-
-.svg-icon-marginGithub{
-  margin: 0% 0% 15% 0%;
-  
-}
-
-.svg-iconEmailButton {
-  display: inline-block;
-  vertical-align: middle;
-  color: lightskyblue;
-  width: 3.1rem;
-  height: 3rem;
 }
 
 
-.svg-icon path,
-.svg-icon polygon,
-.svg-icon rect {
+.Svg-Icon path,
+.Svg-Icon polygon,
+.Svg-Icon rect {
   fill:currentColor;
 }
 
-.svg-icon circle {
-  stroke: black;
+.Svg-Icon circle {
+  stroke: currentColor;
   stroke-width: 1;
 }
+
+
+.Svg-Icon-Margin-Norm{
+  display: block;
+  margin: auto;
+  margin-bottom: 10%;
+}
+
+.Svg-Icon-Margin-Alternate{
+  display: block;
+  margin: auto;
+  margin-bottom: 5%;
+
+  
+}
+
+
+.Svg-Icon-Email-Button {
+  display: inline-block;
+  position: relative;
+  float:center;
+  color: var(--secondary_color);
+  width: 3.5rem;
+  height: 3.5rem;
+  left: 0.5rem;
+}
+
+.Svg-Icon-Email-Button-2 {
+  display: inline-block;
+  position: relative;
+  float:center;
+  color: var(--secondary_color);
+  width: 3.5rem;
+  height: 3.5rem;
+  bottom: 0.8rem;
+  left: 0.5rem;
+}
+
+
+/*
+Below styling is here to make the email button not take up space(to make certain other things easier) while also still
+making the email button's spacing relative in the above two styles.
+It also makes the "Let's work together" text clickable(triggering the email button), for now.
+*/
+
+.About-Email-Line{
+  max-width: 16rem;
+  margin-top: 1.5rem;
+}
+
+.Line-3 > a{
+  position: absolute;
+  padding-left: 28rem;
+  margin-left: -28rem;
+}
+
+.About-Email-Line > a{
+  position: absolute;
+  padding-left: 12rem;
+  margin-left: -12rem;
+}
+
+
+.Svg-Icon:hover .Nav-Unselected,
+.Hover-Color:hover .Svg-Icon-Email-Button,
+.About-Email-Line:hover  .Svg-Icon-Email-Button-2{
+  color: blue;
+}
+
 
 /* Responsive Adjustments */ 
 
 
+
+@media (min-width:1400px) and (min-height: 850px){
+  .About-Flex-Parent{
+    font-size: 1.375rem;
+}
+
+  .About-Text{
+    max-width: 48rem;
+  }
+
+ p{
+  line-height: 2.5rem;
+}
+
+.Large-View{
+  line-height: 3rem;
+}
+
+}
+
+
 @media (max-width:890px){
-  .Line1{
+
+
+  .Main-Flex-Parent{
+    font-size:2rem;
+  }
+
+  .Line-1{
     margin-left: 4.6875rem;
   }
-  .Line2{
+  .Line-2{
     margin-left: 9.375rem;
   }
-  .Line3{
+  .Line-3{
     margin-left: 14.0625rem;
   }
-  .InlineL{
+  .Inline-L{
     max-width: 1.75rem;
     max-height: 1.75rem;
   }
-  .Main-Grid-Parent{
-    font-size:2rem;
+  
+.Svg-Icon-Email-Button{
+  bottom: 0.2rem;
+}
+
+.Svg-Icon-Email-Button-2{
+  bottom: 1rem;
+}
+
+  
+
+}
+
+
+@media (min-width:760px) and (max-height: 530px){
+
+  .About-Flex-Parent{
+    font-size:1rem;
   }
+
 }
 
 
 @media (max-width:760px){
-  .Line1{
+
+
+  .Main-Flex-Parent{
+    font-size:1.4rem;
+  }
+
+  .Line-1{
     margin-left: 2.475rem;
   }
-  .Line2{
+  .Line-2{
     margin-left: 3.75rem;
   }
-  .Line3{
+  .Line-3{
     margin-left: 4.9875rem;
   }
-  .InlineL{
+  .Inline-L{
     margin-top: -.3125rem;
     margin-left: -.4375rem;
     max-width: 1.1875rem;
     max-height: 1.1875rem;
   }
-  .Main-Grid-Parent{
-    font-size:1.4rem;
+  .Svg-Icon-Email-Button {
+    bottom: 0.8rem;
   }
+
+  .About-Flex-Parent{
+    font-size:1rem;
+  }
+
+  p{
+    line-height: 1.75rem;
+  }
+  
+
 }
 
 
-/* The intent below is for the margins to be the same- but they are slightly off because
-if the margins are the exact same, they look like they're not lined up to me. 
-I'm not sure why this is- an optical illusion? */ 
+/* The reason the margins below are almost the same but not quite, is because
+if the margins are teh exact same, they really look like they're not lined up to me.
+Feels like some sort of optical illusion- so I'm making them slightly off so that they feel right. */
+
+
 
 
 @media (max-width:460px){
-  .Line1{
-    margin-left: 3.125rem;
+
+
+  /*
+  This(in conjunctino with the variables defined up top)
+  makes the page's proportions(background, section sizes) fit better on small devices, due to how those proportions
+  work in practice rather than just simply being about sheer resolution size.
+
+  This has an unfortunate side effect of making it look worse when a desktop user resizes their browser window
+  to be small, since the navbar won't hug the corner which makes it look nicer,
+  but usage in a resized browser window is a minor concern for this site so I'm ignoring it for now.
+  */
+  
+  .Default-Styling{
+    font-size: 0.875rem;
+    background: -webkit-linear-gradient(white, white 0%, black 0%, #121212, black  calc(var(--default-height)*var(--top-proportion-of-height-BG-end-phone)), white  calc(var(--default-height)*var(--top-proportion-of-height-BG-end-phone)), white);
   }
-  .Line2{
-    margin-left: 3.25rem;
+
+/*
+As-text is here to reassert its background rule over the media querie'd default styling.
+The alternative is to separate out what I want from Default-Styling for the navbar button styling
+and make the navbars not have default-style reapplied to them(since buttons dont inherit default styling, thus
+why they have the style in the first place- to inherit font information).
+but for now I would rather just define the font size in fewer locations for less confusion.
+*/
+
+  .As-Text{
+    background: none;
   }
-  .Line3{
-    margin-left: 3.375rem;
+
+  .Overall-Grid-Parent{
+    grid-template-rows: calc(var(--default-height)*var(--top-proportion-of-height-phone)) calc(var(--default-height)*var(--bottom-proportion-of-height-phone));
   }
-  .InlineL{
+  
+  .Main-Flex-Parent{
+    height: calc(var(--default-height)*var(--top-proportion-of-height-phone));
+    font-size:1.1rem;
+
+  }
+  .About-Flex-Parent{
+    height: calc(var(--default-height)*var(--top-proportion-of-height-phone));
+  }
+  
+  .About-Text{    
+    margin: 0rem 0rem 0.25rem 1rem;
+  }
+
+  .Nav-Flex-Parent{
+    height: calc(var(--default-height)*var(--bottom-proportion-of-height-phone));
+    padding-right:1rem;
+  }
+    
+
+
+  .Line-1{
+    margin-left: 2.125rem;
+  }
+  .Line-2{
+    margin-left: 2.25rem;
+  }
+  .Line-3{
+    margin-left: 2.375rem;
+  }
+  .Inline-L{
     max-width: 0.9375rem;
     max-height: 0.9375rem;
   }
-  .Main-Grid-Parent{
-    font-size:1.1rem;
+
+  .Svg-Icon-Email-Button {
+    bottom: 1rem;
   }
 
-  
-.Nav-Grid-Parent{
+  .Svg-Icon-Email-Button-2{
+    bottom: 0.9rem;
+  }
+
+  .Large-View{
+    display: none;
+  }
+
+  .Mobile-View{
+    display: inline-block;
+    line-height: 1.4rem;
+  }
+
+  p{
+    line-height: 1.4rem;
+  }
+
 }
 
-
-.Nav-Flex-Parent{
+@media (hover: none) {
+  .Hover-Mobile-Adjustment > .Hover-Color:hover {
+     color: red;
+  }
 }
-
-
-}
-
-
-
-/* -----  ----- */ 
-
-
-/* -----  ----- */ 
-
-
-/* ...Nontext styles */ 
-
-
-/* ...Grid styles */ 
-
-
-/* ...Flexbox styles */ 
-
-/* -----  ----- */ 

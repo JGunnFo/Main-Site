@@ -1,8 +1,7 @@
 
 export const GOTO = "GOTO";
-export const DELIVERER = "DELIVERER"
 
-export function goTo(inputted="main"){
+export function GoTo(inputted="main"){
     return {type: GOTO,
     payload: inputted};
 }

@@ -6,12 +6,6 @@ import { mainContentFrame } from "./subcomponents/topSection";
 import { navBar } from "./subcomponents/bottomSection";
 
 
-/*
-functions needed:
-email function
-resume funciotn
-*/
-
 
 
 class TopComponent extends React.Component {
@@ -49,5 +43,10 @@ function mapStateToProps(state) {
     transition: state.transition
   };
 }
+
+
+/*
+Despite what the above implies, no code for transition state is currently implemented.
+*/
 
 export default connect(mapStateToProps)(TopComponent);
