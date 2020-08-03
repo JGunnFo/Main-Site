@@ -85,7 +85,9 @@ exports[`<App /> renders correctly according to snapshot 1`] = `
           role="navigation"
         >
           <div>
-            <div>
+            <div
+              className="Hover-Mobile-Adjustment"
+            >
               <button
                 className="Nav-Unselected As-Text Default-Styling Nav-Flex-Child Hover-Color"
                 onClick={[Function]}
@@ -104,7 +106,9 @@ exports[`<App /> renders correctly according to snapshot 1`] = `
             </div>
           </div>
           <div>
-            <div>
+            <div
+              className="Hover-Mobile-Adjustment"
+            >
               <button
                 className="Nav-Selected As-Text Default-Styling Nav-Flex-Child Hover-Color"
                 onClick={[Function]}
@@ -243,7 +247,9 @@ exports[`<App /> renders correctly when About is the start initialstate 1`] = `
           role="navigation"
         >
           <div>
-            <div>
+            <div
+              className="Hover-Mobile-Adjustment"
+            >
               <button
                 className="Nav-Selected As-Text Default-Styling Nav-Flex-Child Hover-Color"
                 onClick={[Function]}
@@ -262,7 +268,9 @@ exports[`<App /> renders correctly when About is the start initialstate 1`] = `
             </div>
           </div>
           <div>
-            <div>
+            <div
+              className="Hover-Mobile-Adjustment"
+            >
               <button
                 className="Nav-Unselected As-Text Default-Styling Nav-Flex-Child Hover-Color"
                 onClick={[Function]}

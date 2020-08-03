@@ -13,8 +13,6 @@ export function navBar(props){
       {navBarButton("Main", props)}
       {navBarButton("Resume", props)}
       {navBarButton("Github", props)}
-      {navBarButton("Main", props)}
-      {navBarButton("About", props)}
       </div>
       </div>
     );
