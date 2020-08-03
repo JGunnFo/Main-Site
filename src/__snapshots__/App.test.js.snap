@@ -46,21 +46,22 @@ exports[`<App /> renders correctly according to snapshot 1`] = `
               Jeffrey Gunn
             </div>
             <div
-              className="Main-Text-Emph Line-3"
+              className="Main-Text-Emph Line-3 Hover-Color"
             >
               <img
                 aria-hidden="true"
                 className="Inline-L"
                 src="transparent.png"
               />
-               Let's work together. 
+               Let's work together.
               <a
                 aria-label="Mail Jeffrey Gunn"
+                className="Hover-Color"
                 href="mailto:jeffgunnweb@gmail.com?subject=Edit this subject line to avoid the filter for bots."
               >
                 <svg
                   aria-hidden="true"
-                  className="Svg-Icon Svg-Icon-Email-Button"
+                  className="Svg-Icon Svg-Icon-Email-Button Hover-Color"
                   viewBox="0 0 20 20"
                 >
                   <path
@@ -86,7 +87,7 @@ exports[`<App /> renders correctly according to snapshot 1`] = `
           <div>
             <div>
               <button
-                className="Nav-Unselected As-Text Default-Styling Nav-Flex-Child"
+                className="Nav-Unselected As-Text Default-Styling Nav-Flex-Child Hover-Color"
                 onClick={[Function]}
               >
                 <svg
@@ -105,7 +106,7 @@ exports[`<App /> renders correctly according to snapshot 1`] = `
           <div>
             <div>
               <button
-                className="Nav-Selected As-Text Default-Styling Nav-Flex-Child"
+                className="Nav-Selected As-Text Default-Styling Nav-Flex-Child Hover-Color"
                 onClick={[Function]}
               >
                 <svg
@@ -122,7 +123,7 @@ exports[`<App /> renders correctly according to snapshot 1`] = `
             </div>
           </div>
           <div
-            className="Nav-Unselected As-Text Default-Styling Nav-Flex-Child"
+            className="Nav-Unselected As-Text Default-Styling Nav-Flex-Child Hover-Color"
           >
             <svg
               aria-hidden="true"
@@ -135,15 +136,15 @@ exports[`<App /> renders correctly according to snapshot 1`] = `
               />
             </svg>
             <a
-              aria-label="Github Link"
-              className="svgLink"
+              aria-label="Resumé Link"
+              className="Hover-Color"
               href="https://github.com/JGunnFo/"
             >
               Résumé
             </a>
           </div>
           <div
-            className="Nav-Unselected As-Text Default-Styling Nav-Flex-Child"
+            className="Nav-Unselected As-Text Default-Styling Nav-Flex-Child Hover-Color"
           >
             <svg
               aria-hidden="true"
@@ -156,7 +157,7 @@ exports[`<App /> renders correctly according to snapshot 1`] = `
             </svg>
             <a
               aria-label="Github Link"
-              className="svgLink"
+              className="Hover-Color"
               href="https://github.com/JGunnFo/"
             >
               Github
@@ -206,15 +207,18 @@ exports[`<App /> renders correctly when About is the start initialstate 1`] = `
               >
                 I love to learn through comparison, whether that means comparing different websites' designs or countries' histories. I get a big kick out of understanding possibilities and their nuanced tradeoffs.
               </div>
-              <p>
+              <div
+                className="Hover-Color About-Email-Line"
+              >
                 Let's work together: 
                 <a
                   aria-label="Mail Jeffrey Gunn"
+                  className="Hover-Color"
                   href="mailto:jeffgunnweb@gmail.com?subject=Edit this subject line to avoid the filter for bots."
                 >
                   <svg
                     aria-hidden="true"
-                    className="Svg-Icon Svg-Icon-Email-Button-2"
+                    className="Svg-Icon Svg-Icon-Email-Button-2 Hover-Color"
                     viewBox="0 0 20 20"
                   >
                     <path
@@ -222,7 +226,7 @@ exports[`<App /> renders correctly when About is the start initialstate 1`] = `
                     />
                   </svg>
                 </a>
-              </p>
+              </div>
             </div>
           </div>
         </div>
@@ -241,7 +245,7 @@ exports[`<App /> renders correctly when About is the start initialstate 1`] = `
           <div>
             <div>
               <button
-                className="Nav-Selected As-Text Default-Styling Nav-Flex-Child"
+                className="Nav-Selected As-Text Default-Styling Nav-Flex-Child Hover-Color"
                 onClick={[Function]}
               >
                 <svg
@@ -260,7 +264,7 @@ exports[`<App /> renders correctly when About is the start initialstate 1`] = `
           <div>
             <div>
               <button
-                className="Nav-Unselected As-Text Default-Styling Nav-Flex-Child"
+                className="Nav-Unselected As-Text Default-Styling Nav-Flex-Child Hover-Color"
                 onClick={[Function]}
               >
                 <svg
@@ -277,7 +281,7 @@ exports[`<App /> renders correctly when About is the start initialstate 1`] = `
             </div>
           </div>
           <div
-            className="Nav-Unselected As-Text Default-Styling Nav-Flex-Child"
+            className="Nav-Unselected As-Text Default-Styling Nav-Flex-Child Hover-Color"
           >
             <svg
               aria-hidden="true"
@@ -290,15 +294,15 @@ exports[`<App /> renders correctly when About is the start initialstate 1`] = `
               />
             </svg>
             <a
-              aria-label="Github Link"
-              className="svgLink"
+              aria-label="Resumé Link"
+              className="Hover-Color"
               href="https://github.com/JGunnFo/"
             >
               Résumé
             </a>
           </div>
           <div
-            className="Nav-Unselected As-Text Default-Styling Nav-Flex-Child"
+            className="Nav-Unselected As-Text Default-Styling Nav-Flex-Child Hover-Color"
           >
             <svg
               aria-hidden="true"
@@ -311,7 +315,7 @@ exports[`<App /> renders correctly when About is the start initialstate 1`] = `
             </svg>
             <a
               aria-label="Github Link"
-              className="svgLink"
+              className="Hover-Color"
               href="https://github.com/JGunnFo/"
             >
               Github

@@ -13,6 +13,8 @@ export function navBar(props){
       {navBarButton("Main", props)}
       {navBarButton("Resume", props)}
       {navBarButton("Github", props)}
+      {navBarButton("Main", props)}
+      {navBarButton("About", props)}
       </div>
       </div>
     );
@@ -53,7 +55,7 @@ and the function will get the html right and call the svg function appropriately
 
     return(
       <div>
-      <div><button className={navStyle} onClick={() => {props.dispatch(GoTo(passTo))}}>{selectSVG(passTo)}{passTo}</button></div>
+      <div className="Hover-Mobile-Adjustment"><button className={navStyle} onClick={() => {props.dispatch(GoTo(passTo))}}>{selectSVG(passTo)}{passTo}</button></div>
       </div>
     );
   }
