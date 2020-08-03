@@ -382,6 +382,15 @@ It also makes the "Let's work together" text clickable(triggering the email butt
 }
 
 
+@media (min-width:760px) and (max-height: 530px){
+
+  .About-Flex-Parent{
+    font-size:1rem;
+  }
+
+}
+
+
 @media (max-width:760px){
 
 
