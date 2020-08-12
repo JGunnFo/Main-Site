@@ -2,7 +2,8 @@ import React from 'react';
 import '../App.css';
 import { connect } from "react-redux";
 import { GOTO, GoTo} from "../Actions";
-import theL from './transparent.png';
+import theL from './corner-L.png';
+
 
 
 export function mainContentFrame(props){

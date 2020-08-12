@@ -96,7 +96,8 @@ html {
 /* ...Nontext styles */ 
 
 
-
+/* Leaving gap in main-flex-parent even though it doesnt work in all browers for flexboxes,
+since the effect is nice but minimal, so it isnt a significant risk for cross-browser design. */
 
 .Main-Flex-Parent{
   display: flex;
@@ -145,7 +146,6 @@ p{
   flex-basis: 100%;
   
   height: calc(var(--default-height)*var(--top-proportion-of-height));
-  gap: .125rem;
   font-size:1.125rem;
   
   justify-content: center;
@@ -185,6 +185,13 @@ a:visited, a:link{
   text-decoration: none;
 }
 
+
+
+/* The padding/margin setup is to set up a replacement for the fact that the "gap"
+property doesnt work in flexbox on many browsers.
+The effect is mostly important when there's 2 rows of navbar icons.
+*/
+
 .As-Text {
   background:none;
   border:none;
@@ -193,6 +200,9 @@ a:visited, a:link{
   margin: -3rem 0rem 0rem 0rem; 
 }
 
+
+/* .Nav-Unselected > a is here to make clickable area for navbar links bigger.
+*/
 
 .Nav-Unselected > a {     
   display: inline-block;     
