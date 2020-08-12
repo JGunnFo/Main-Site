@@ -37,7 +37,7 @@ and the function will get the html right and call the svg function appropriately
       return(
       <div className={navStyle}>
       {selectSVG("Resume")}
-      <a className="Hover-Color" href="https://github.com/JGunnFo/" aria-label="Resumé Link">Résumé</a>
+      <a className="Hover-Color" href="https://docs.google.com/document/d/1_vqqhpSAl3kXKC-hNbROnguHFbJenmrUCTGnEJ2KfAQ/" aria-label="Resumé Link">Résumé</a>
       </div>
       )
     }
