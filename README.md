@@ -1,4 +1,4 @@
-Site is up at https://jeffrey-gunn.com/
+Site can be visited at https://jeffrey-gunn.com/
 
 So far, Redux wasn't really necessary for this page, but wanted it in case this page ended up needing it in the future.
 
