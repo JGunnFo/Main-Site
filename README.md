@@ -1,3 +1,5 @@
+Site is up at https://jeffrey-gunn.com/
+
 So far, Redux wasn't really necessary for this page, but wanted it in case this page ended up needing it in the future.
 
 Selected navigation button contrast level isn't up to a certain level of WCAG standards for contrast, but that level is for things like body text, so I believe this is fine for this element.
