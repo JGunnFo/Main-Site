@@ -29,7 +29,7 @@ export function mainContentFrame(props){
   }
   
   
-  if (mainProp==="Portfolio"){
+  if (mainProp==="Sites"){
     return( 
       <div role="main">{sectionPortfolio()}</div>
    )
