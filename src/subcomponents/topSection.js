@@ -28,8 +28,18 @@ export function mainContentFrame(props){
    )
   }
   
+  
+  if (mainProp==="Portfolio"){
+    return( 
+      <div role="main">{sectionPortfolio()}</div>
+   )
+  }
    
   }
+
+
+
+
   function sectionMain(){
     return(
       <div className="Main-Flex-Parent">
@@ -44,7 +54,7 @@ export function mainContentFrame(props){
   function sectionAbout(){
     return(
       <div className="About-Flex-Parent">
-        <div className="About-Text">
+        <div className="About-Text-Boundaries">
         <p>Hi, I'm a front-end developer who likes goats and modern European history.</p>
         <div className="Large-View">I grew up in Texas, then moved to Portland and worked QA before deciding to become a front-end developer.</div>
         <div className="Large-View">I love to learn by comparing lots of different things, whether that means comparing different websites' designs or countries' histories. I get a big kick out of understanding possibilities and their nuanced tradeoffs.</div>
@@ -55,6 +65,18 @@ export function mainContentFrame(props){
   }
   
 
+  function sectionPortfolio(){
+    return(
+      <div className="About-Flex-Parent">
+        <div className="About-Text-Boundaries Portfolio-Text">
+        <a className="Portfolio-Site-Title" href="https://gwrandomizer.com/" aria-label="Sample Site Link">Guild Wars Skill Pool Randomizer </a>
+        <p>A Django website that generates random challenges for players of Guild Wars.</p>
+        <a className="Portfolio-Site-Title" href="https://sample.jeffrey-gunn.com/" aria-label="Sample Site Link">Transformable Graphs Sample </a>
+        <p>Utilizes React and Redux to implement an example blog site featuring transformable graphs that are fully screenreader accessible.</p>
+      </div></div>
+    );
+  }
+  
   
   
   function emailButton(location){

@@ -123,11 +123,15 @@ since the effect is nice but minimal, so it isnt a significant risk for cross-br
 
 /* ----- Top Section, for when About is selected  ----- */ 
 
-.About-Text{
+.About-Text-Boundaries{
   margin: 1.25rem 1.25rem 1.25rem 2.25rem;
   
   max-width: 39rem;
 }
+
+    /* Currently using About-Text-Boundaries and About-Flex-Parent for both About component and Portfolio component.
+    because it is convenient for similar needs and the media queries attached to those.
+    Will give it a more generic name if reused for a 3rd time. */
 
 p{
   line-height: 2rem;
@@ -153,6 +157,33 @@ p{
 }
 
 
+/* ----- Top Section, for when Sites is selected  ----- */ 
+
+
+.Portfolio-Text{
+  text-align: center  
+}
+
+
+.Portfolio-Site-Title:link, .Portfolio-Site-Title:visited{
+  color: rgb(19, 108, 241);
+  text-decoration: underline;
+}
+
+
+.Portfolio-Site-Title:visited{
+  color: purple;
+}
+
+
+
+.Portfolio-Site-Title:hover{
+  color: red;
+}
+
+
+
+
 
 /* ----- Lower Half, mainly Navbar ----- */ 
 
@@ -174,9 +205,9 @@ p{
 
 /*
 Adjusting the color of links. Reasoning:
-Few visitable links and they're all on the navbar,
+Few visitable links and they're almost all on the navbar,
 so their clickability will be obvious, and color differences for clicked links
-would have negligible function gain vs a little bit of impact on the attention flow 
+would have negligible function gain vs significant impact on the attention flow 
 and color design of the page. 
 */
 
@@ -343,7 +374,7 @@ It also makes the "Let's work together" text clickable(triggering the email butt
     font-size: 1.375rem;
 }
 
-  .About-Text{
+  .About-Text-Boundaries{
     max-width: 48rem;
   }
 
@@ -489,13 +520,15 @@ but for now I would rather just define the font size in fewer locations for less
     height: calc(var(--default-height)*var(--top-proportion-of-height-phone));
   }
   
-  .About-Text{    
+  .About-Text-Boundaries{    
     margin: 0rem 0rem 0.25rem 1rem;
   }
 
   .Nav-Flex-Parent{
     height: calc(var(--default-height)*var(--bottom-proportion-of-height-phone));
     padding-right:1rem;
+    flex-flow: wrap-reverse;
+    padding-top: 0rem;
   }
     
 
