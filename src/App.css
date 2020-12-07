@@ -78,23 +78,6 @@ html {
 
 }
 
-.Line-1{
-  margin-left: 6.25rem;
-}
-
-.Line-2{
-  margin-left: 12.5rem;
-
-}
-
-.Line-3{
-  margin-left: 18.75rem;
-
-}
-
-
-/* ...Nontext styles */ 
-
 
 /* Leaving gap in main-flex-parent even though it doesnt work in all browers for flexboxes,
 since the effect is nice but minimal, so it isnt a significant risk for cross-browser design. */
@@ -111,6 +94,20 @@ since the effect is nice but minimal, so it isnt a significant risk for cross-br
 }
 
 
+.Line-1{
+  margin-left: 6.25rem;
+}
+
+.Line-2{
+  margin-left: 12.5rem;
+
+}
+
+.Line-3{
+  margin-left: 18.75rem;
+
+}
+
 
 .Inline-L{
   display: inline;
@@ -122,6 +119,19 @@ since the effect is nice but minimal, so it isnt a significant risk for cross-br
 
 
 /* ----- Top Section, for when About is selected  ----- */ 
+
+
+.About-Flex-Parent{
+  display: flex;
+  flex-basis: 100%;
+  
+  height: calc(var(--default-height)*var(--top-proportion-of-height));
+  font-size:1.125rem;
+  
+  justify-content: center;
+  align-items: center;
+}
+
 
 .About-Text-Boundaries{
   margin: 1.25rem 1.25rem 1.25rem 2.25rem;
@@ -142,19 +152,6 @@ p{
 }
 
 
-/* ...Nontext styles */ 
-
-
-.About-Flex-Parent{
-  display: flex;
-  flex-basis: 100%;
-  
-  height: calc(var(--default-height)*var(--top-proportion-of-height));
-  font-size:1.125rem;
-  
-  justify-content: center;
-  align-items: center;
-}
 
 
 /* ----- Top Section, for when Sites is selected  ----- */ 
@@ -527,8 +524,6 @@ but for now I would rather just define the font size in fewer locations for less
   .Nav-Flex-Parent{
     height: calc(var(--default-height)*var(--bottom-proportion-of-height-phone));
     padding-right:1rem;
-    flex-flow: wrap-reverse;
-    padding-top: 0rem;
   }
     
 
@@ -569,6 +564,16 @@ but for now I would rather just define the font size in fewer locations for less
   }
 
 }
+
+
+@media (max-width:370px){
+
+.Nav-Flex-Parent{
+  flex-flow: wrap-reverse;
+  padding-top: 0rem;
+}
+}
+
 
 @media (hover: none) {
   .Hover-Mobile-Adjustment > .Hover-Color:hover {
