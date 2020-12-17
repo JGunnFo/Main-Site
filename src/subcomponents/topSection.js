@@ -31,7 +31,7 @@ export function mainContentFrame(props){
   
   if (mainProp==="Sites"){
     return( 
-      <div role="main">{sectionPortfolio()}</div>
+      <div role="main" className="Portfolio-Container">{sectionPortfolio()}</div>
    )
   }
    
@@ -67,7 +67,7 @@ export function mainContentFrame(props){
 
   function sectionPortfolio(){
     return(
-      <div className="About-Flex-Parent">
+      <div className="About-Flex-Parent Portfolio-Parent">
         <div className="About-Text-Boundaries Portfolio-Text">
         <a className="Portfolio-Site-Title" href="https://gwrandomizer.com/" aria-label="Sample Site Link">Guild Wars Skill Pool Randomizer </a>
         <p>A Django website that generates random challenges for players of Guild Wars.</p>

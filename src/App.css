@@ -158,7 +158,7 @@ p{
 
 
 .Portfolio-Text{
-  text-align: center  
+  text-align: center;  
 }
 
 
@@ -364,9 +364,9 @@ It also makes the "Let's work together" text clickable(triggering the email butt
 
 /* Responsive Adjustments */ 
 
-
-
 @media (min-width:1400px) and (min-height: 850px){
+
+
   .About-Flex-Parent{
     font-size: 1.375rem;
 }
@@ -382,6 +382,22 @@ It also makes the "Let's work together" text clickable(triggering the email butt
 .Large-View{
   line-height: 3rem;
 }
+
+}
+
+
+
+
+@media (min-width:800px) and (min-height: 600px){
+
+  .Portfolio-Parent > .About-Text-Boundaries{
+    margin-top: 4.5rem;
+  }
+
+
+  .Portfolio-Text > p{
+    margin-bottom: 3rem;
+  }
 
 }
 
@@ -516,10 +532,21 @@ but for now I would rather just define the font size in fewer locations for less
   .About-Flex-Parent{
     height: calc(var(--default-height)*var(--top-proportion-of-height-phone));
   }
+
   
   .About-Text-Boundaries{    
     margin: 0rem 0rem 0.25rem 1rem;
   }
+
+  .Portfolio-Parent > .About-Text-Boundaries{
+    margin: 1rem 0rem 0rem 1rem;
+  }
+
+
+    /* Currently using About-Text-Boundaries and About-Flex-Parent for both About component and Portfolio component.
+    because it is convenient for similar needs and the media queries attached to those.
+    Will give it a more generic name if reused for a 3rd time. */
+
 
   .Nav-Flex-Parent{
     height: calc(var(--default-height)*var(--bottom-proportion-of-height-phone));
