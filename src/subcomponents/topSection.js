@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../App.css';
 import { connect } from "react-redux";
 import { GOTO, GoTo} from "../Actions";
@@ -6,32 +6,38 @@ import theL from './corner-L.png';
 
 
 
-export function mainContentFrame(props){
+export function MainContentFrame({props}){
+
+  
     return(
-      <div aria-live="polite">{selectContent(props.section)}</div>  
+      <div aria-live="polite">
+      <SelectContent
+      section={props.section}
+      />
+      </div>  
     );
   }
   
 
-  function selectContent(mainProp){
+  function SelectContent({section}){
 
-    if (mainProp==="Main"){
+    if (section==="Main"){
       return( 
-        <div role="main">{sectionMain()}</div>
+        <div role="main"><SectionMain/></div>
      )
   }
   
   
-  if (mainProp==="About"){
+  if (section==="About"){
     return( 
-      <div role="main">{sectionAbout()}</div>
+      <div role="main"><SectionAbout/></div>
    )
   }
   
   
-  if (mainProp==="Sites"){
+  if (section==="Sites"){
     return( 
-      <div role="main" className="Portfolio-Container">{sectionPortfolio()}</div>
+      <div role="main" className="Portfolio-Container"><SectionPortfolio/></div>
    )
   }
    
@@ -40,18 +46,18 @@ export function mainContentFrame(props){
 
 
 
-  function sectionMain(){
+  function SectionMain(){
     return(
       <div className="Main-Flex-Parent">
         <div className="Main-Text-Emph Line-1 Large-View"><img className="Inline-L" src={theL} aria-hidden="true" />React Redux Front-End Developer</div>
         <div className="Main-Text-Emph Line-1 Mobile-View"><img className="Inline-L" src={theL} aria-hidden="true" />React Redux Front-End Dev</div>
         <div className="Main-Text-Deemph Line-2 "><img className="Inline-L" src={theL} aria-hidden="true" />Jeffrey Gunn</div>
-        <div className="Main-Text-Emph Line-3 Hover-Color"><img className="Inline-L" src={theL}  aria-hidden="true" /> Let's work together.{emailButton("Main")}</div>
+        <div className="Main-Text-Emph Line-3 Hover-Color"><img className="Inline-L" src={theL}  aria-hidden="true" /> Let's work together.<EmailButton location="Main"/></div>
       </div>
     );
   }
   
-  function sectionAbout(){
+  function SectionAbout(){
     return(
       <div className="About-Flex-Parent">
         <div className="About-Text-Boundaries">
@@ -59,13 +65,13 @@ export function mainContentFrame(props){
         <div className="Large-View">I grew up in Texas, then moved to Portland and worked QA before deciding to become a front-end developer.</div>
         <div className="Large-View">I love to learn by comparing lots of different things, whether that means comparing different websites' designs or countries' histories. I get a big kick out of understanding possibilities and their nuanced tradeoffs.</div>
         <div className="Mobile-View">I love to learn through comparison, whether that means comparing different websites' designs or countries' histories. I get a big kick out of understanding possibilities and their nuanced tradeoffs.</div>
-        <div className="Hover-Color About-Email-Line">Let's work together: {emailButton("About")}</div></div>
+        <div className="Hover-Color About-Email-Line">Let's work together: <EmailButton location="About"/></div></div>
       </div>
     );
   }
   
 
-  function sectionPortfolio(){
+  function SectionPortfolio(){
     return(
       <div className="About-Flex-Parent Portfolio-Parent">
         <div className="About-Text-Boundaries Portfolio-Text">
@@ -79,7 +85,7 @@ export function mainContentFrame(props){
   
   
   
-  function emailButton(location){
+  function EmailButton({location}){
     let style
       if (location==="Main"){
         style="Svg-Icon Svg-Icon-Email-Button Hover-Color"

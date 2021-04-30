@@ -5,15 +5,30 @@ import { GOTO, GoTo} from "../Actions";
 
 
 
-export function navBar(props){
+export function NavBar({props}){
     return(
       <div className="Nav-Background">
       <div className="Nav-Flex-Parent" role="navigation">
-      {navBarButton("About", props)}
-      {navBarButton("Main", props)}
-      {navBarButton("Resume", props)}
-      {navBarButton("Github", props)}
-      {navBarButton("Sites", props)}
+        <NavBarButton
+        passTo="About"
+        props={props}
+        />
+        <NavBarButton
+        passTo="Main"
+        props={props}
+        />
+        <NavBarButton
+        passTo="Resume"
+        props={props}
+        />
+        <NavBarButton
+        passTo="Github"
+        props={props}
+        />
+        <NavBarButton
+        passTo="Sites"
+        props={props}
+        />
       </div>
       </div>
     );
@@ -25,7 +40,7 @@ the below function will determine the style based on state(as in, is it selected
 and the function will get the html right and call the svg function appropriately.
 */
   
-  function navBarButton(passTo, props){
+  function NavBarButton({passTo, props}){
 
     let navStyle
     if (props.section===passTo){
@@ -37,7 +52,9 @@ and the function will get the html right and call the svg function appropriately
     if (passTo==="Resume"){
       return(
       <div className={navStyle}>
-      {selectSVG("Resume")}
+      <SelectSVG
+      passTo="Resume"
+      />
       <a className="Hover-Color" href="https://docs.google.com/document/d/1_vqqhpSAl3kXKC-hNbROnguHFbJenmrUCTGnEJ2KfAQ/" aria-label="Resumé Link">Résumé</a>
       </div>
       )
@@ -46,7 +63,9 @@ and the function will get the html right and call the svg function appropriately
     if (passTo==="Github"){
       return(
       <div className={navStyle}>
-      {selectSVG("Github")}
+      <SelectSVG
+      passTo="Github"
+      />
       <a className="Hover-Color" href="https://github.com/JGunnFo?tab=repositories" aria-label="Github Link">{passTo} </a>
       </div>
       )
@@ -56,7 +75,12 @@ and the function will get the html right and call the svg function appropriately
 
     return(
       <div>
-      <div className="Hover-Mobile-Adjustment"><button className={navStyle} onClick={() => {props.dispatch(GoTo(passTo))}}>{selectSVG(passTo)}{passTo}</button></div>
+      <div className="Hover-Mobile-Adjustment"><button className={navStyle} onClick={() => {props.dispatch(GoTo(passTo))}}>
+        <SelectSVG
+        passTo={passTo}
+        />
+        {passTo}
+        </button></div>
       </div>
     );
   }
@@ -64,7 +88,7 @@ and the function will get the html right and call the svg function appropriately
   
   
 
-function selectSVG(passTo){
+function SelectSVG({passTo}){
 
   if (passTo==="About"){
     return( 
